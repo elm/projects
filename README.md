@@ -35,8 +35,21 @@ Once we have the basic version, it can be used to do other cool stuff. For examp
 
 A super simple way to run all of your tests, as described [here](https://groups.google.com/forum/#!topic/elm-dev/-oC1b4KuELA).
 
-## Visualize compilation and testing
+## Visualize Compilation
 
-It would be cool if when you compile your code or test your code, you get a nice dashboard that shows you what is going on and helps you fix any problems that may exist.
+It would be cool if when you compile your code, you get a nice dashboard that shows you what is going on and helps you fix any problems that may exist. We could show all the dependencies of the project as a very cool progress bar:
 
-Mock coming soon!
+![dependency graph progress](https://raw.githubusercontent.com/elm-lang/projects/master/compiler-progress-visualization/mock.gif)
+
+Notice that we can keep compiling files even after one failed if they do not depend on each other. We could make it so a user would click on a red node to get a in-browser panel about that module and what the particular errors were. This way, doing a refactor does not require going back to the compiler tons of times, you just run it and fix everything that is red!
+
+Maybe we could also add information about build statistics. Which modules are slow?
+
+
+## Visualize Tests
+
+Same idea as visualizing compilation, but instead we see progress on tests.
+
+Tests are often heirarchical, so we can have things organized by top-level test suites. Those turn green if every sub-test is green. If any sub-test fail, we can navigate down the heirarchy until we get the particulars of that exact test.
+
+Again, we can have speed statistics, so if some tests are super slow it is easy to discover and work on.
