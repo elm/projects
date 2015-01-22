@@ -60,3 +60,11 @@ This connects back to the Elm Reactor navigation progress a bit, but it can be d
 Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either. This would let us show `Element` and `Html` values really easily!
 
 This is super free-form. Maybe inspiration can come from iPython.
+
+## Dead code elimination
+
+Elm sometimes produces JS output that is large than necessary because it includes functions which are not referenced. For example, if you use `Debug.crash` in your program it needs the `Debug` module, which needs the `Form` type which is in `Graphics.Collage` which needs `Graphics.Element`. And then you have all the `Element` and `Collage` functions in your output even thought they will never be executed.
+
+To avoid this we need to extend the information in the `*.elmi` files that the compiler produces to include definitions references by each top level definition in the module. Once that information is available `elm-make` can create a function dependency graph and determine which ones are alive and which are dead.
+
+Instead of concatenating modules together, `elm-make` should concatenate individual functions together to create the minimal JS output. Native modules will still need to be included in their entirety because they cannot be broken down, but large savings will still result because fewer native modules will need to be pulled in.
