@@ -60,3 +60,13 @@ This connects back to the Elm Reactor navigation progress a bit, but it can be d
 Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either. This would let us show `Element` and `Html` values really easily!
 
 This is super free-form. Maybe inspiration can come from iPython.
+
+## Dead code elimination
+
+Elm can figure out which modules are unused and exclude them from the JS output, but it is possible to do this on the level of functions.
+
+Here is an example where it would be a big improvement: if you use `Debug.crash` in your program it needs the `Debug` module, which needs the `Form` type which is in `Graphics.Collage` which needs `Graphics.Element`. And then you have all the `Element` and `Collage` functions in your output even thought they will never be executed.
+
+Right now, we just look at which modules are needed. So the nodes in our dependency graph are modules. One way to do dead code elimination is to make this more fine grained. We can make the nodes in the dependency graph *values*. This means adding additional information to the `.elmi` or `.elmo` files so we know what is needed for each function and value. From there we can just pick the values we need!
+
+There are other approaches, so it could also be cool to evaluate other strategies to see what works better. In any case, it seems that native modules will need to be included in their entirety because they cannot be broken down with their current design.
