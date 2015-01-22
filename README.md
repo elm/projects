@@ -70,3 +70,10 @@ Here is an example where it would be a big improvement: if you use `Debug.crash`
 Right now, we just look at which modules are needed. So the nodes in our dependency graph are modules. One way to do dead code elimination is to make this more fine grained. We can make the nodes in the dependency graph *values*. This means adding additional information to the `.elmi` or `.elmo` files so we know what is needed for each function and value. From there we can just pick the values we need!
 
 There are other approaches, so it could also be cool to evaluate other strategies to see what works better. In any case, it seems that native modules will need to be included in their entirety because they cannot be broken down with their current design.
+
+
+## Preview Documentation
+
+A common request from package authors is "How can I see the docs before I publish my package?" Like in [this issue](https://github.com/elm-lang/elm-lang.org/issues/169). The new package.elm-lang.org site is based on just a few .elm files, each one reading in a bunch of JSON spit out by `elm-doc`. It seems plausible to make some sort of Haskell module that can be used as a library and from the command line, so that package.elm-lang.org can use it *and* people can use it.
+
+I think this project is something that many people would appreciate and it does not seem crazy.
