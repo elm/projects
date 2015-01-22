@@ -77,3 +77,8 @@ There are other approaches, so it could also be cool to evaluate other strategie
 A common request from package authors is "How can I see the docs before I publish my package?" Like in [this issue](https://github.com/elm-lang/elm-lang.org/issues/169). The new package.elm-lang.org site is based on just a few .elm files, each one reading in a bunch of JSON spit out by `elm-doc`. It seems plausible to make some sort of Haskell module that can be used as a library and from the command line, so that package.elm-lang.org can use it *and* people can use it.
 
 I think this project is something that many people would appreciate and it does not seem crazy.
+
+
+## Make elm-doc better
+
+There are [a number of issues open](https://github.com/elm-lang/elm-compiler/issues?q=is%3Aissue+is%3Aopen+elm-doc) about the rough edges of `elm-doc` that would all make for great improvements in the package publishing experience.
