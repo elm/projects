@@ -6,7 +6,9 @@ look and see if anything catches your eye!
 
 ## Improve Elm Reactor Navigation Page
 
-Here is a mock of the craziest, most extreme version of this project:
+Right now, the navigation page of [Elm Reactor](http://elm-lang.org/blog/Introducing-Elm-Reactor.elm)
+is not the most exciting or well-designed. Here is a mock what that navigation page *could* look like,
+with a bunch of new and useful features:
 
 ![navigation mock](https://raw.githubusercontent.com/elm-lang/projects/master/elm-reactor-navigation/mock.png)
 
