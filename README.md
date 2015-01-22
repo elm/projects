@@ -14,7 +14,7 @@ look and see if anything catches your eye!
 
 Here is a mock of the craziest, most extreme version of this project:
 
-![navigation mock](https://raw.githubusercontent.com/elm-lang/projects/master/elm-reactor/navigation-mock.png)
+![navigation mock](https://raw.githubusercontent.com/elm-lang/projects/master/elm-reactor-navigation/mock.png)
 
 Obviously not all of this needs to be done at once! First step is probably just rewriting things in Elm.
 
