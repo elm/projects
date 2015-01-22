@@ -4,6 +4,7 @@ This is a big list of Elm projects that are somewhere on a very long todo list.
 Many of these ideas are great for contributions and collaborators, so take a
 look and see if anything catches your eye!
 
+
 ## Improve Elm Reactor Navigation Page
 
 Right now, the navigation page of [Elm Reactor](http://elm-lang.org/blog/Introducing-Elm-Reactor.elm)
@@ -30,9 +31,11 @@ Go has had lots of success with [gofmt](http://blog.golang.org/go-fmt-your-code)
 
 Once we have the basic version, it can be used to do other cool stuff. For example, when someone wants to upgrade from version 1.0.0 to 2.0.0 of some package, we could have a set of upgrade hints that would automatically do as much of the upgrade as possible. If the code is managed by `elm-format` then we have a guarantee that it will come out with nice style!
 
+
 ## elm-test
 
 A super simple way to run all of your tests, as described [here](https://groups.google.com/forum/#!topic/elm-dev/-oC1b4KuELA).
+
 
 ## Visualize Compilation
 
@@ -53,6 +56,7 @@ Tests are often heirarchical, so we can have things organized by top-level test 
 
 Again, we can have speed statistics, so if some tests are super slow it is easy to discover and work on.
 
+
 ## In-browser REPL
 
 This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
@@ -60,16 +64,6 @@ This connects back to the Elm Reactor navigation progress a bit, but it can be d
 Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either. This would let us show `Element` and `Html` values really easily!
 
 This is super free-form. Maybe inspiration can come from iPython.
-
-## Dead code elimination
-
-Elm can figure out which modules are unused and exclude them from the JS output, but it is possible to do this on the level of functions.
-
-Here is an example where it would be a big improvement: if you use `Debug.crash` in your program it needs the `Debug` module, which needs the `Form` type which is in `Graphics.Collage` which needs `Graphics.Element`. And then you have all the `Element` and `Collage` functions in your output even thought they will never be executed.
-
-Right now, we just look at which modules are needed. So the nodes in our dependency graph are modules. One way to do dead code elimination is to make this more fine grained. We can make the nodes in the dependency graph *values*. This means adding additional information to the `.elmi` or `.elmo` files so we know what is needed for each function and value. From there we can just pick the values we need!
-
-There are other approaches, so it could also be cool to evaluate other strategies to see what works better. In any case, it seems that native modules will need to be included in their entirety because they cannot be broken down with their current design.
 
 
 ## Preview Documentation
@@ -82,3 +76,16 @@ I think this project is something that many people would appreciate and it does 
 ## Make elm-doc better
 
 There are [a number of issues open](https://github.com/elm-lang/elm-compiler/issues?q=is%3Aissue+is%3Aopen+elm-doc) about the rough edges of `elm-doc` that would all make for great improvements in the package publishing experience.
+
+
+## Dead code elimination
+
+Elm can figure out which modules are unused and exclude them from the JS output, but it is possible to do this on the level of functions.
+
+Here is an example where it would be a big improvement: if you use `Debug.crash` in your program it needs the `Debug` module, which needs the `Form` type which is in `Graphics.Collage` which needs `Graphics.Element`. And then you have all the `Element` and `Collage` functions in your output even thought they will never be executed.
+
+Right now we create a dependency graph of modules. When we want module `Main` we go and grab its dependencies, their dependencies, etc. If a module is not needed, we will not run into it. One potential approach is to use the same general idea, but do it on the level of *values* instead of modules. Just try to get `Main.main` and its dependencies, their dependencies, etc. This would mean adding additional information to the `.elmi` or `.elmo` files generated during compilation.
+
+There are other approaches, so it could also be cool to evaluate other strategies to see what works better. In any case, it seems that native modules will need to be included in their entirety because they cannot be broken down with their current design.
+
+
