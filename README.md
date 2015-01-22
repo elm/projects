@@ -63,8 +63,10 @@ This is super free-form. Maybe inspiration can come from iPython.
 
 ## Dead code elimination
 
-Elm sometimes produces JS output that is large than necessary because it includes functions which are not referenced. For example, if you use `Debug.crash` in your program it needs the `Debug` module, which needs the `Form` type which is in `Graphics.Collage` which needs `Graphics.Element`. And then you have all the `Element` and `Collage` functions in your output even thought they will never be executed.
+Elm can figure out which modules are unused and exclude them from the JS output, but it is possible to do this on the level of functions.
 
-To avoid this we need to extend the information in the `*.elmi` files that the compiler produces to include definitions references by each top level definition in the module. Once that information is available `elm-make` can create a function dependency graph and determine which ones are alive and which are dead.
+Here is an example where it would be a big improvement: if you use `Debug.crash` in your program it needs the `Debug` module, which needs the `Form` type which is in `Graphics.Collage` which needs `Graphics.Element`. And then you have all the `Element` and `Collage` functions in your output even thought they will never be executed.
 
-Instead of concatenating modules together, `elm-make` should concatenate individual functions together to create the minimal JS output. Native modules will still need to be included in their entirety because they cannot be broken down, but large savings will still result because fewer native modules will need to be pulled in.
+Right now, we just look at which modules are needed. So the nodes in our dependency graph are modules. One way to do dead code elimination is to make this more fine grained. We can make the nodes in the dependency graph *values*. This means adding additional information to the `.elmi` or `.elmo` files so we know what is needed for each function and value. From there we can just pick the values we need!
+
+There are other approaches, so it could also be cool to evaluate other strategies to see what works better. In any case, it seems that native modules will need to be included in their entirety because they cannot be broken down with their current design.
