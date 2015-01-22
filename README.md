@@ -6,17 +6,17 @@ look and see if anything catches your eye!
 
 ## Improve Elm Reactor Navigation Page
 
+Here is a mock of the craziest, most extreme version of this project:
+
+![navigation mock](https://raw.githubusercontent.com/elm-lang/projects/master/elm-reactor-navigation/mock.png)
+
+This can be broken up into much smaller and more manageable steps that are each very worthwhile:
+
   1. Rewrite in Elm. Right now it is done like [this](https://github.com/elm-lang/elm-reactor/blob/master/backend/Index.hs) which is a terrible shame.
   2. Improve style, perhaps taking inspiration from GitHub navigation.
   3. Improve layout and usability. Lots of people have trouble figuring out what the wrench icon does and miss out on cool features!
   4. Show README.md files with elm-markdown if they exist.
   5. Make it easy to find documentation for packages that are used *without* an internet connection.
-
-Here is a mock of the craziest, most extreme version of this project:
-
-![navigation mock](https://raw.githubusercontent.com/elm-lang/projects/master/elm-reactor-navigation/mock.png)
-
-Obviously not all of this needs to be done at once! First step is probably just rewriting things in Elm.
 
 
 ## In-browser REPL
