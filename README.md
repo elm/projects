@@ -19,12 +19,6 @@ This can be broken up into much smaller and more manageable steps that are each 
   5. Make it easy to find documentation for packages that are used *without* an internet connection.
 
 
-## In-browser REPL
-
-Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either.
-
-This is super free-form. Maybe inspiration can come from iPython.
-
 ## elm-format
 
 Go has had lots of success with [gofmt](http://blog.golang.org/go-fmt-your-code) and it would be cool to have the same power in Elm.
@@ -53,3 +47,11 @@ Same idea as visualizing compilation, but instead we see progress on tests.
 Tests are often heirarchical, so we can have things organized by top-level test suites. Those turn green if every sub-test is green. If any sub-test fail, we can navigate down the heirarchy until we get the particulars of that exact test.
 
 Again, we can have speed statistics, so if some tests are super slow it is easy to discover and work on.
+
+## In-browser REPL
+
+This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
+
+Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either. This would let us show `Element` and `Html` values really easily!
+
+This is super free-form. Maybe inspiration can come from iPython.
