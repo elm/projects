@@ -19,6 +19,9 @@ This can be broken up into much smaller and more manageable steps that are each 
   3. Improve layout and usability. Lots of people have trouble figuring out what the wrench icon does and miss out on cool features!
   4. Show README.md files with elm-markdown if they exist.
   5. Make it easy to find documentation for packages that are used *without* an internet connection.
+  6. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
+
+I think 5 and 6 actually are projects of their own, but they could certainly be exposed through this API.
 
 
 ## elm-format
