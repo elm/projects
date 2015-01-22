@@ -43,7 +43,7 @@ It would be cool if when you compile your code, you get a nice dashboard that sh
 
 Notice that we can keep compiling files even after one failed if they do not depend on each other. We could make it so a user would click on a red node to get a in-browser panel about that module and what the particular errors were. This way, doing a refactor does not require going back to the compiler tons of times, you just run it and fix everything that is red!
 
-Maybe we could also add information about build statistics. Which modules are slow?
+Maybe we could also add information about build statistics. Which modules are slow? Are there bottlenecks in the dependency graph that lead to less parallelization? I think this could be cool on really large projects when you want to do tricks to bring down compile times.
 
 
 ## Visualize Tests
