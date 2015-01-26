@@ -57,6 +57,23 @@ Tests are often heirarchical, so we can have things organized by top-level test 
 Again, we can have speed statistics, so if some tests are super slow it is easy to discover and work on.
 
 
+## Bad-Type-Error-Message Hall of Fame
+
+It is known that type errors can come with quite confusing messages. This project is essentially an effort to create a big catalog of error messages such that we can:
+
+1. **Discover patterns.** Are there certain things that always turn out bad? Can we focus on them? Is there an easy fix? As things stand, we have no idea about this.
+2. **Evaluate fixes.** Even once we know a problem, it is quite hard to know if error messages approve across the board. Maybe we fixed the case we care about, but messed up a bunch of others!
+
+I am imagining a tool we can run with different versions of the compiler and see all the different error messages spit out side-by-side. This would be a huge help to every future person looking to improve error messages!
+
+
+## Better Type Error Messages
+
+I saw a demo of how to improve type errors in OCaml that I found quite compelling. The talk was called "Improving Type Error Messages in OCaml" and had great results ([paper](http://ocaml.org/meetings/ocaml/2014/ocaml2014_9.pdf), [slides](http://ocaml.org/meetings/ocaml/2014/chargueraud-slides.pdf), [video](https://www.youtube.com/watch?v=V_ipQZeBueg&list=UUP9g4dLR7xt6KzCYntNqYcw)).
+
+This was at ICFP 2014 in [the OCaml Workshop](http://ocaml.org/meetings/ocaml/2014/) which has a great focus on practical and useful topics. It is refreshing to see a room full of FP folks trying to solve real problems.
+
+
 ## In-browser REPL
 
 This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
@@ -76,6 +93,8 @@ I think this project is something that many people would appreciate and it does 
 ## Make elm-doc better
 
 There are [a number of issues open](https://github.com/elm-lang/elm-compiler/issues?q=is%3Aissue+is%3Aopen+elm-doc) about the rough edges of `elm-doc` that would all make for great improvements in the package publishing experience.
+
+This is also a nice way to learn more about the compiler without taking on a massive and/or risky task.
 
 
 ## Dead code elimination
