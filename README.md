@@ -88,7 +88,10 @@ Right now we create a dependency graph of modules. When we want module `Main` we
 
 There are other approaches, so it could also be cool to evaluate other strategies to see what works better. In any case, it seems that native modules will need to be included in their entirety because they cannot be broken down with their current design.
 
+Thanks to @laszlopandy for this idea!
+
 ## Elm Application Scaffold
 
-Ember.js has an awesome tool called `ember-cli` that assists in generating code & building assets. I'd love to eventually see Elm have everything `ember-cli` does, but for starters, it'd be nice to have a tool that scaffolds an application structure based on the existing community best practices, with tests ready to run. Of course, it can evolve with the practices. I've started this work using the Haskell library "Hi" over at http://github.com/joefiorini/hi-elm, but would love to see something like it in `elm-make`, maybe like `elm-make init`?
+&ldquo;Ember.js has an awesome tool called `ember-cli` that assists in generating code & building assets. I'd love to eventually see Elm have everything `ember-cli` does, but for starters, it'd be nice to have a tool that scaffolds an application structure based on the existing community best practices, with tests ready to run. Of course, it can evolve with the practices. I've started this work using the Haskell library "Hi" over at http://github.com/joefiorini/hi-elm, but would love to see something like it in `elm-make`, maybe like `elm-make init`?&rdquo;
 
+Thanks to @joefiorini for this idea!
