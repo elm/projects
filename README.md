@@ -27,9 +27,9 @@ I think 5 and 6 actually are projects of their own, but they could certainly be 
 
 ## elm-format
 
-Go has had lots of success with [gofmt](http://blog.golang.org/go-fmt-your-code) and it would be cool to have the same power in Elm.
+Go has had lots of success with [gofmt](http://blog.golang.org/go-fmt-your-code) and it would be cool to have the same power in Elm. 
 
-Once we have the basic version, it can be used to do other cool stuff. For example, when someone wants to upgrade from version 1.0.0 to 2.0.0 of some package, we could have a set of upgrade hints that would automatically do as much of the upgrade as possible. If the code is managed by `elm-format` then we have a guarantee that it will come out with nice style!
+Once we have the basic version, it can be used to do other cool stuff. For example, when someone wants to upgrade from version 1.0.0 to 2.0.0 of some package, we could have a set of upgrade hints that would automatically do as much of the upgrade as possible. There is a [discussion about auto-upgrade on elm-dev](https://groups.google.com/d/topic/elm-dev/zmgGF-yljUA/discussion). If the code is managed by `elm-format` then we have a guarantee that it will come out with nice style! This is exactly how Go got [gofix](http://golang.org/cmd/fix/). 
 
 
 ## elm-test
