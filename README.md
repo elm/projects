@@ -109,8 +109,22 @@ There are other approaches, so it could also be cool to evaluate other strategie
 
 Thanks to @laszlopandy for this idea!
 
+
 ## Elm Application Scaffold
 
 &ldquo;Ember.js has an awesome tool called `ember-cli` that assists in generating code & building assets. I'd love to eventually see Elm have everything `ember-cli` does, but for starters, it'd be nice to have a tool that scaffolds an application structure based on the existing community best practices, with tests ready to run. Of course, it can evolve with the practices. I've started this work using the Haskell library "Hi" over at http://github.com/joefiorini/hi-elm, but would love to see something like it in `elm-make`, maybe like `elm-make init`?&rdquo;
 
 Thanks to @joefiorini for this idea!
+
+
+## Elm installeres
+
+Elm is a cross-platform tool. One implication is that users of each platform have different expectations of how to install Elm. On OSX it might be `homebrew`, on Windows... etc.
+
+Installers that would be nice to support:
+
+- [Homebrew](http://brew.sh/) Useful for developer-savvy OSX users.
+- [Docker](https://registry.hub.docker.com) Something official that would be maintained, the existing ones are stale. Useful in a context where Elm runs in some deployed/sandboxed setting.
+- ~~OSX Installer~~ Done
+- ~~Windows Installer~~ Done
+- ...Add another if you know something that would benefit users
