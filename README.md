@@ -128,3 +128,15 @@ Installers that would be nice to support:
 - ~~OSX Installer~~ - Done
 - ~~Windows Installer~~ - Done
 - ...Add another if you know something that would benefit users
+
+
+## Support for Google Closure Compiler advanced mode.
+
+Google Closure Compiler's advanced mode can optimize code further by making assumptions about the JavaScript code. Unfortunately Elm's output breaks those assuptions and doesn't work with advanced mode.
+
+Fixes needed:
+ * Support obfuscation in port mashalling: [Fixed](https://github.com/elm-lang/elm-compiler/pull/877)
+ * Protect public module names from being exported: [Needs work](https://github.com/elm-lang/elm-compiler/pull/877)
+ * Protect 'Elm' from obfuscation: [Needs work](https://github.com/elm-lang/elm-make/pull/12)
+ * Protect Elm's public API (ie. 'fullscreen', 'embed', 'worker') and ports API from obfuscation.
+ * Don't use strings for field access in record updates (in [JavaScript.hs](https://github.com/elm-lang/elm-compiler/blob/f5236297c19913db12a66a3b09014e5ba2fcd8a4/src/Generate/JavaScript.hs#L92))
