@@ -123,8 +123,8 @@ Elm is a cross-platform tool. One implication is that users of each platform hav
 
 Installers that would be nice to support:
 
-- [Homebrew](http://brew.sh/) Useful for developer-savvy OSX users.
-- [Docker](https://registry.hub.docker.com) Something official that would be maintained, the existing ones are stale. Useful in a context where Elm runs in some deployed/sandboxed setting.
-- ~~OSX Installer~~ Done
-- ~~Windows Installer~~ Done
+- [Homebrew](http://brew.sh/) - Useful for developer-savvy OSX users.
+- [Docker](https://registry.hub.docker.com) - Something official that would be maintained, the existing ones are stale. Useful in a context where Elm runs in some deployed/sandboxed setting.
+- ~~OSX Installer~~ - Done
+- ~~Windows Installer~~ - Done
 - ...Add another if you know something that would benefit users
