@@ -117,7 +117,7 @@ Thanks to @laszlopandy for this idea!
 Thanks to @joefiorini for this idea!
 
 
-## Elm installeres
+## Elm installers
 
 Elm is a cross-platform tool. One implication is that users of each platform have different expectations of how to install Elm. On OSX it might be `homebrew`, on Windows... etc.
 
