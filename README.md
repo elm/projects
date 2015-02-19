@@ -52,7 +52,7 @@ Maybe we could also add information about build statistics. Which modules are sl
 
 Same idea as visualizing compilation, but instead we see progress on tests.
 
-Tests are often heirarchical, so we can have things organized by top-level test suites. Those turn green if every sub-test is green. If any sub-test fail, we can navigate down the heirarchy until we get the particulars of that exact test.
+Tests are often hierarchical, so we can have things organized by top-level test suites. Those turn green if every sub-test is green. If any sub-test fail, we can navigate down the heirarchy until we get the particulars of that exact test.
 
 Again, we can have speed statistics, so if some tests are super slow it is easy to discover and work on.
 
@@ -96,6 +96,15 @@ There are [a number of issues open](https://github.com/elm-lang/elm-compiler/iss
 
 This is also a nice way to learn more about the compiler without taking on a massive and/or risky task.
 
+## Organizing elm-package
+
+The package website currently lists all libraries in alphabetical order, and all modules within a library in alphabetical order. We can do better.
+
+A way to tag or categorize libraries would be helpful. Draw inspiration from [npm](https://www.npmjs.com/) and [rubyGems](https://rubygems.org/). The core library (and maybe other "official" libraries) can be shown prominently.
+
+Within libraries, the maintainer should be able to specify the order of modules, and perhaps groups with headers. This will be most useful for the core libraries, to avoid the intimidating complexity at [swiftdoc](http://swiftdoc.org/).
+
+A global search function would be nice, too.
 
 ## Dead code elimination
 
