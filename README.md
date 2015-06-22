@@ -90,13 +90,6 @@ A common request from package authors is "How can I see the docs before I publis
 I think this project is something that many people would appreciate and it does not seem crazy.
 
 
-## Make elm-doc better
-
-There are [a number of issues open](https://github.com/elm-lang/elm-compiler/issues?q=is%3Aissue+is%3Aopen+elm-doc) about the rough edges of `elm-doc` that would all make for great improvements in the package publishing experience.
-
-This is also a nice way to learn more about the compiler without taking on a massive and/or risky task.
-
-
 ## Dead code elimination
 
 Elm can figure out which modules are unused and exclude them from the JS output, but it is possible to do this on the level of functions.
