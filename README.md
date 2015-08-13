@@ -5,18 +5,6 @@ Many of these ideas are great for contributions and collaborators, so take a
 look and see if anything catches your eye!
 
 
-## Improve Elm Reactor Navigation Page
-
-Thanks to @JustusAdam and this repo, [Elm Reactor](http://elm-lang.org/blog/time-travel-made-easy)'s navigation page has undergone a really nice visual overhaul!
-
-![New Navigation Page](https://cloud.githubusercontent.com/assets/1658058/9261514/405ec898-41c3-11e5-9bc5-22eefb082743.png)
-
-There are still some cool things we can do though!
-
-  1. Make possible to read documentation for packages *without* an internet connection.
-  2. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
-
-
 ## elm-format
 
 Go has had lots of success with [gofmt](http://blog.golang.org/go-fmt-your-code) and it would be cool to have the same power in Elm. 
@@ -60,6 +48,18 @@ This is super free-form. Maybe inspiration can come from iPython.
 A common request from package authors is "How can I see the docs before I publish my package?" Like in [this issue](https://github.com/elm-lang/elm-lang.org/issues/169). The new package.elm-lang.org site is based on just a few .elm files, each one reading in a bunch of JSON spit out by `elm-doc`. It seems plausible to make some sort of Haskell module that can be used as a library and from the command line, so that package.elm-lang.org can use it *and* people can use it.
 
 I think this project is something that many people would appreciate and it does not seem crazy.
+
+
+## Improve Elm Reactor Navigation Page
+
+Thanks to @JustusAdam and this repo, [Elm Reactor](http://elm-lang.org/blog/time-travel-made-easy)'s navigation page has undergone a really nice visual overhaul!
+
+![New Navigation Page](https://cloud.githubusercontent.com/assets/1658058/9261514/405ec898-41c3-11e5-9bc5-22eefb082743.png)
+
+There are still some cool things we can do though!
+
+  1. Make possible to read documentation for packages *without* an internet connection.
+  2. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
 
 
 ## Elm installers
