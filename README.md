@@ -9,13 +9,12 @@ look and see if anything catches your eye!
 
 Thanks to @JustusAdam and this repo, [Elm Reactor](http://elm-lang.org/blog/time-travel-made-easy)'s navigation page has undergone a really nice visual overhaul!
 
-![New Navigation Page](https://cloud.githubusercontent.com/assets/5824532/8757628/1e964d36-2cdc-11e5-81f9-f7bc4220c391.png)
+![New Navigation Page](https://cloud.githubusercontent.com/assets/1658058/9261514/405ec898-41c3-11e5-9bc5-22eefb082743.png)
 
 There are still some cool things we can do though!
 
-  1. Show any README.md files at the bottom of the navigation page if they exist (using `elm-markdown`).
-  2. Make it easy to find documentation for packages that are used *without* an internet connection.
-  3. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
+  1. Make possible to read documentation for packages *without* an internet connection.
+  2. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
 
 
 ## elm-format
