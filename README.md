@@ -5,7 +5,7 @@ Many of these ideas are great for contributions and collaborators, so take a
 look and see if anything catches your eye!
 
 
-## elm-format
+## elm-format [[in progress](https://github.com/avh4/elm-format)]
 
 Go has had lots of success with [gofmt](http://blog.golang.org/go-fmt-your-code) and it would be cool to have the same power in Elm. 
 
