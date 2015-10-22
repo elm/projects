@@ -64,13 +64,12 @@ There are still some cool things we can do though!
 
 ## Elm installers
 
-Elm is a cross-platform tool. One implication is that users of each platform have different expectations of how to install Elm. On OSX it might be `homebrew`, on Windows... etc.
+Elm is a cross-platform tool. One implication is that users of each platform have different expectations of how to install Elm.
 
 Installers that would be nice to support:
 
 - Arch
 - NixOS
-- [Homebrew](http://brew.sh/) - Useful for developer-savvy OSX users.
 - [Docker](https://registry.hub.docker.com) - Something official that would be maintained, the existing ones are stale. Useful in a context where Elm runs in some deployed/sandboxed setting.
 - ...Add another if you know something that would benefit users
 
