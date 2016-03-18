@@ -43,13 +43,6 @@ Some modules are best examined with the time-traveling debugger, others are best
 This is super free-form. Maybe inspiration can come from iPython.
 
 
-## Preview Documentation
-
-A common request from package authors is "How can I see the docs before I publish my package?" Like in [this issue](https://github.com/elm-lang/elm-lang.org/issues/169). The new package.elm-lang.org site is based on just a few .elm files, each one reading in a bunch of JSON spit out by `elm-doc`. It seems plausible to make some sort of Haskell module that can be used as a library and from the command line, so that package.elm-lang.org can use it *and* people can use it.
-
-I think this project is something that many people would appreciate and it does not seem crazy.
-
-
 ## Improve Elm Reactor Navigation Page
 
 Thanks to @JustusAdam and this repo, [Elm Reactor](http://elm-lang.org/blog/time-travel-made-easy)'s navigation page has undergone a really nice visual overhaul!
