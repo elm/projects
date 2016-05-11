@@ -5,11 +5,9 @@ Many of these ideas are great for contributions and collaborators, so take a
 look and see if anything catches your eye!
 
 
-## elm-format [[in progress](https://github.com/avh4/elm-format)]
+## Make elm-lang.org responsive
 
-Go has had lots of success with [gofmt](http://blog.golang.org/go-fmt-your-code) and it would be cool to have the same power in Elm. 
-
-Once we have the basic version, it can be used to do other cool stuff. For example, when someone wants to upgrade from version 1.0.0 to 2.0.0 of some package, we could have a set of upgrade hints that would automatically do as much of the upgrade as possible. There is a [discussion about auto-upgrade on elm-dev](https://groups.google.com/d/topic/elm-dev/zmgGF-yljUA/discussion). If the code is managed by `elm-format` then we have a guarantee that it will come out with nice style! This is exactly how Go got [gofix](http://golang.org/cmd/fix/). 
+Right now it is not. It would be pretty great if it was! You can check out the code [here](https://github.com/elm-lang/elm-lang.org/).
 
 
 ## Visualize Compilation
