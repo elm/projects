@@ -20,7 +20,12 @@ Notice that we can keep compiling files even after one failed if they do not dep
 
 Maybe we could also add information about build statistics. Which modules are slow? Are there bottlenecks in the dependency graph that lead to less parallelization? I think this could be cool on really large projects when you want to do tricks to bring down compile times.
 
-If you work on this, assume `elm-make` is producing a dependency graph and spits out info about each module as compilation happens, and then work on the UI. That information about compilation is in the pipeline for `elm-make` so do not block on it!
+If you work on this, **start with the UI**. Do not worry about integration at first. I would expect the steps to be:
+
+  - Make a library for visualizing dependency graphs. Probably with SVG.
+  - Use dummy dependency graphs and script dummy events to see things flow through.
+
+If this works, you will definitely have a cool library. From there, we can figure out how to get `elm-make` producing the necessary information.
 
 
 ## Visualize Tests
