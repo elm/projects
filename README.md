@@ -54,17 +54,6 @@ Thanks to @JustusAdam and this repo, [Elm Reactor](http://elm-lang.org/blog/time
 
 There are still some cool things we can do though!
 
-  1. Make possible to read documentation for packages *without* an internet connection.
-  2. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
+  1. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
+  2. Make possible to read documentation for packages *without* an internet connection.
 
-
-## Elm installers
-
-Elm is a cross-platform tool. One implication is that users of each platform have different expectations of how to install Elm.
-
-Installers that would be nice to support:
-
-- Arch
-- NixOS
-- [Docker](https://registry.hub.docker.com) - Something official that would be maintained, the existing ones are stale. Useful in a context where Elm runs in some deployed/sandboxed setting.
-- ...Add another if you know something that would benefit users
