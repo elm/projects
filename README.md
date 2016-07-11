@@ -29,24 +29,6 @@ The implementation of [elm-lang/virtual-dom](https://github.com/elm-lang/virtual
 Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
 
 
-## Visualize Compilation
-
-It would be cool if when you compile your code, you get a nice dashboard that shows you what is going on and helps you fix any problems that may exist. We could show all the dependencies of the project as a very cool progress bar:
-
-![dependency graph progress](https://raw.githubusercontent.com/elm-lang/projects/master/compiler-progress-visualization/mock.gif)
-
-Notice that we can keep compiling files even after one failed if they do not depend on each other. We could make it so a user would click on a red node to get a in-browser panel about that module and what the particular errors were. This way, doing a refactor does not require going back to the compiler tons of times, you just run it and fix everything that is red!
-
-Maybe we could also add information about build statistics. Which modules are slow? Are there bottlenecks in the dependency graph that lead to less parallelization? I think this could be cool on really large projects when you want to do tricks to bring down compile times.
-
-If you work on this, **start with the UI**. Do not worry about integration at first. I would expect the steps to be:
-
-  - Make a library for visualizing dependency graphs. Probably with SVG.
-  - Use dummy dependency graphs and script dummy events to see things flow through.
-
-If this works, you will definitely have a cool library. From there, we can figure out how to get `elm-make` producing the necessary information.
-
-
 ## In-browser REPL
 
 This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
@@ -67,3 +49,20 @@ There are still some cool things we can do though!
   1. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
   2. Make possible to read documentation for packages *without* an internet connection.
 
+
+## Visualize Compilation
+
+It would be cool if when you compile your code, you get a nice dashboard that shows you what is going on and helps you fix any problems that may exist. We could show all the dependencies of the project as a very cool progress bar:
+
+![dependency graph progress](https://raw.githubusercontent.com/elm-lang/projects/master/compiler-progress-visualization/mock.gif)
+
+Notice that we can keep compiling files even after one failed if they do not depend on each other. We could make it so a user would click on a red node to get a in-browser panel about that module and what the particular errors were. This way, doing a refactor does not require going back to the compiler tons of times, you just run it and fix everything that is red!
+
+Maybe we could also add information about build statistics. Which modules are slow? Are there bottlenecks in the dependency graph that lead to less parallelization? I think this could be cool on really large projects when you want to do tricks to bring down compile times.
+
+If you work on this, **start with the UI**. Do not worry about integration at first. I would expect the steps to be:
+
+  - Make a library for visualizing dependency graphs. Probably with SVG.
+  - Use dummy dependency graphs and script dummy events to see things flow through.
+
+If this works, you will definitely have a cool library. From there, we can figure out how to get `elm-make` producing the necessary information.
