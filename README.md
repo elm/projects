@@ -10,6 +10,25 @@ look and see if anything catches your eye!
 Right now it is not. It would be pretty great if it was! You can check out the code [here](https://github.com/elm-lang/elm-lang.org/).
 
 
+## Compare Elm's virtual-dom to other stuff
+
+I would like to update [this blog post](http://elm-lang.org/blog/blazing-fast-html) now that everyone has had a chance to speed their stuff up. The [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) implementation (rewritten from scratch for Elm 0.17) is quite fast. The [ui-perf](https://github.com/evancz/ui-perf) project shows that it compares favorably to React, but it would be good to have more reference points.
+
+**Goal:** Add Ember, Angular 1, and Angular 2 to the [ui-perf](https://github.com/evancz/ui-perf) project. Make sure they conform to the same [methodology](https://github.com/evancz/ui-perf#methodology) as the other projects. No `requestAnimationFrame`, no skipping frames! I have been doing two versions for each project: one with no optimizations enabled, and one with &ldquo;reasonable&rdquo; optimizations. Here reasonable means &ldquo;follow standard optimization practices&rdquo; without specializing for any particular benchmark.
+
+
+## Benchmark virtual-dom
+
+The implementation of [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) should be quite fast. It may be possible to do better though!
+
+**Goal:** Get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives). This would allow us to:
+
+    1. Be sure that code is getting optimized (but not deoptimized!)
+    2. Know more about how much garbage is produced.
+  
+Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
+
+
 ## Visualize Compilation
 
 It would be cool if when you compile your code, you get a nice dashboard that shows you what is going on and helps you fix any problems that may exist. We could show all the dependencies of the project as a very cool progress bar:
