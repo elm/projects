@@ -23,8 +23,8 @@ The implementation of [elm-lang/virtual-dom](https://github.com/elm-lang/virtual
 
 **Goal:** Get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives). This would allow us to:
 
-    1. Be sure that code is getting optimized (but not deoptimized!)
-    2. Know more about how much garbage is produced.
+  1. Be sure that code is getting optimized (but not deoptimized!)
+  2. Know more about how much garbage is produced.
   
 Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
 
