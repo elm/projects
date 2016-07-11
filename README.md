@@ -47,15 +47,6 @@ If you work on this, **start with the UI**. Do not worry about integration at fi
 If this works, you will definitely have a cool library. From there, we can figure out how to get `elm-make` producing the necessary information.
 
 
-## Visualize Tests
-
-Same idea as visualizing compilation, but instead we see progress on tests.
-
-Tests are often heirarchical, so we can have things organized by top-level test suites. Those turn green if every sub-test is green. If any sub-test fail, we can navigate down the heirarchy until we get the particulars of that exact test.
-
-Again, we can have speed statistics, so if some tests are super slow it is easy to discover and work on.
-
-
 ## In-browser REPL
 
 This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
