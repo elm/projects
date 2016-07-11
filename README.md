@@ -40,11 +40,7 @@ This is super free-form. Maybe inspiration can come from iPython.
 
 ## Improve Elm Reactor Navigation Page
 
-Thanks to @JustusAdam and this repo, [Elm Reactor](http://elm-lang.org/blog/time-travel-made-easy)'s navigation page has undergone a really nice visual overhaul!
-
-![New Navigation Page](https://cloud.githubusercontent.com/assets/1658058/9261514/405ec898-41c3-11e5-9bc5-22eefb082743.png)
-
-There are still some cool things we can do though!
+Thanks to @JustusAdam and this repo, [Elm Reactor](https://github.com/elm-lang/elm-reactor)'s navigation page has undergone a really nice visual overhaul! There are still some cool things we can do though:
 
   1. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
   2. Make possible to read documentation for packages *without* an internet connection.
