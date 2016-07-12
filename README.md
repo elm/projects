@@ -37,6 +37,8 @@ There is [this robot](https://github.com/process-bot/) that goes around on Elm r
   
   2. When a PR is opened, have process-bot check a list of people who have given contributors agreements. If they have given one, great! If not, give them a message telling them how to proceed.
 
+The relevant code lives in [this repo](https://github.com/process-bot/contribution-checklist).
+
 
 ## In-browser REPL
 
