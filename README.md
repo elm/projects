@@ -40,6 +40,15 @@ There is [this robot](https://github.com/process-bot/) that goes around on Elm r
 The relevant code lives in [this repo](https://github.com/process-bot/contribution-checklist).
 
 
+## Improve Contributor Agreement Process
+
+Okay, this one has a few steps:
+
+  1. Study how this works in different languages. Python, Clojure, etc. Figure out how they manage it, how much work it is, the particular documents, etc.
+  2. Clearly write up the different options.
+  3. After discussion, possibly make some tools to make this easy to track and integrate with process-bot.
+
+
 ## In-browser REPL
 
 This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
