@@ -42,10 +42,12 @@ The relevant code lives in [this repo](https://github.com/process-bot/contributi
 
 ## Improve Contributor Agreement Process
 
-Okay, this one has a few steps:
+Right now, you need to find [this agreement](https://github.com/elm-lang/elm-compiler/blob/master/ContributorAgreement.pdf), figure out how to fill it in, and figure out how to get it to me. This process kind of sucks!
+
+There are a couple steps we can take towards improving:
 
   1. Study how this works in different languages. Python, Clojure, etc. Figure out how they manage it, how much work it is, the particular documents, etc.
-  2. Clearly write up the different options.
+  2. Clearly write up the different options and share on the elm-dev mailing list.
   3. After discussion, possibly make some tools to make this easy to track and integrate with process-bot.
 
 
