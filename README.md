@@ -9,10 +9,25 @@ look and see if anything catches your eye!
 
 Right now it is not. It would be pretty great if it was! You can check out the code [here](https://github.com/elm-lang/elm-lang.org/).
 
+The code there is basically "get the site working" quality, and it seems like a revised version would move away from inline styles to normal CSS and classes.
 
-## Benchmark virtual-dom
 
-The implementation of [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) should be quite fast. It may be possible to do better though!
+## Offline and Private Docs
+
+There are tons of nice docs on [package.elm-lang.org](http://package.elm-lang.org/). Behind the scenes, there is an Elm program that turns JSON files [like this](http://package.elm-lang.org/packages/elm-lang/core/4.0.5/documentation.json) into nice interactive pages. Here are some things that would be cool:
+
+  1. **Make a package that just parses strings into Elm types.** I have some code that does it, but it is unreleasable. It would be great for the community to have a tool like this that is well-tested!
+  
+  2. **Make a package that that displays docs for a single module.** I would expect this to be a `view` function and `decodeDocs` JSON decoder. It can rely on that type parsing package!
+
+  3. **Use all that code in `elm-reactor` or some other command line tool.** Lots of folks would like to browse documentation when they are offline. Some companies have private code, but they want the docs to be nice internally. Once you have the ability to show module docs pretty easily, making a command line tool for this is pretty easy. You run `elm-make --docs ...` and do something with the output.
+
+The benefit of this approach is that any changes to the style of the package website would propagate to *all* tools that show documentation pretty easily.
+
+
+## Profiling `virtual-dom` with V8 tools
+
+The `elm-lang/virtual-dom` library is [quite fast](http://elm-lang.org/blog/blazing-fast-html-round-two). It may be possible to do better though!
 
 **Goal:** Get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives). This would allow us to:
 
@@ -20,28 +35,6 @@ The implementation of [elm-lang/virtual-dom](https://github.com/elm-lang/virtual
   2. Know more about how much garbage is produced.
   
 Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
-
-
-## Improve Process Bot
-
-There is [this robot](https://github.com/process-bot/) that goes around on Elm repos, trying to help issues and PRs go smoothly by letting people know about [the contribution-checklist](https://github.com/process-bot/contribution-checklist). There are two features that I think it would be great to have:
-
-  1. Once a thread gets to 10 posts, process-bot would comment and tell people to close it down and (1) close it down and summarize the state of affairs in a new issue, (2) move the discussion somewhere else until it can be made more clear, or (3) keep talking in the closed thread until you decide to do 1 or 2.
-  
-  2. When a PR is opened, have process-bot check a list of people who have given contributors agreements. If they have given one, great! If not, give them a message telling them how to proceed.
-
-The relevant code lives in [this repo](https://github.com/process-bot/contribution-checklist).
-
-
-## Improve Contributor Agreement Process
-
-Right now, you need to find [this agreement](https://github.com/elm-lang/elm-compiler/blob/master/ContributorAgreement.pdf), figure out how to fill it in, and figure out how to get it to me. This process kind of sucks!
-
-There are a couple steps we can take towards improving:
-
-  1. Study how this works in different languages. Python, Clojure, etc. Figure out how they manage it, how much work it is, the particular documents, etc.
-  2. Clearly write up the different options and share on the elm-dev mailing list.
-  3. After discussion, possibly make some tools to make this easy to track and integrate with process-bot.
 
 
 ## In-browser REPL
@@ -53,12 +46,15 @@ Some modules are best examined with the time-traveling debugger, others are best
 This is super free-form. Maybe inspiration can come from iPython.
 
 
-## Improve Elm Reactor Navigation Page
+## Improve Process Bot
 
-Thanks to @JustusAdam and this repo, [Elm Reactor](https://github.com/elm-lang/elm-reactor)'s navigation page has undergone a really nice visual overhaul! There are still some cool things we can do though:
+There is [this robot](https://github.com/process-bot/) that goes around on Elm repos, trying to help issues and PRs go smoothly by letting people know about [the contribution-checklist](https://github.com/process-bot/contribution-checklist). There are two features that I think it would be great to have:
 
-  1. Figure out if new versions of packages exist and give notifications. Maybe have information about upgrade costs based on API diffs and number of uses of changed or removed values.
-  2. Make possible to read documentation for packages *without* an internet connection.
+  1. Once a thread gets to 10 posts, process-bot would comment and tell people to close it down and (1) close it down and summarize the state of affairs in a new issue, (2) move the discussion somewhere else until it can be made more clear, or (3) keep talking in the closed thread until you decide to do 1 or 2.
+  
+  2. When a PR is opened, have process-bot check a list of people who have given contributors agreements. If they have given one, great! If not, give them a message telling them how to proceed.
+
+The relevant code lives in [this repo](https://github.com/process-bot/contribution-checklist).
 
 
 ## Visualize Compilation
