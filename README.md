@@ -5,6 +5,25 @@ Many of these ideas are great for contributions and collaborators, so take a
 look and see if anything catches your eye!
 
 
+## Make Libraries
+
+API design is very hard to do well, so start by reading these resources in full:
+
+  - Read [guide.elm-lang.org](https://guide.elm-lang.org/) in full.
+  - Read the [design guidelines](http://package.elm-lang.org/help/design-guidelines).
+  - Reread [this section](https://guide.elm-lang.org/reuse/).
+  - Follow the links and watch the videos [here](https://guide.elm-lang.org/reuse/more.html).
+
+Meanwhile, be building your own stuff and talking to members of the community who have been around longer. From there, there are a bunch of libraries that it would be great to have in Elm:
+
+  - **Data Visualization** &mdash; It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small. Make a library that just shows pretty time plots or bar charts. It has a `view` function that takes some data. From there, share your work and get feedback!
+  
+  - **Date Picker** &mdash; It is truly insane how much time has been spent *talking* about date pickers. I think projects like [`elm-sortable-table`](https://github.com/evancz/elm-sortable-table) and [`elm-autocomplete`](https://github.com/thebritican/elm-autocomplete) point the way to doing this in a nice way. I would start by making and API before doing any coding and asking for feedback on [`elm-dev`](https://groups.google.com/forum/#!forum/elm-dev).
+
+In all these cases, **the most important thing is to expect a feedback phase.** I have done API design sessions with a bunch of folks now, enough that I figured I should just start recording them to share. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs and the best way to improve is to learn from people who have done it before.
+  
+
+
 ## Make elm-lang.org responsive
 
 Right now it is not. It would be pretty great if it was! You can check out the code [here](https://github.com/elm-lang/elm-lang.org/).
