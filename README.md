@@ -7,21 +7,22 @@ look and see if anything catches your eye!
 
 ## Make Libraries
 
-API design is very hard to do well, so start by reading these resources in full:
-
-  - Read [guide.elm-lang.org](https://guide.elm-lang.org/) in full.
-  - Read the [design guidelines](http://package.elm-lang.org/help/design-guidelines).
-  - Reread [this section](https://guide.elm-lang.org/reuse/).
-  - Follow the links and watch the videos [here](https://guide.elm-lang.org/reuse/more.html).
-
-Meanwhile, be building your own stuff and talking to members of the community who have been around longer. From there, there are a bunch of libraries that it would be great to have in Elm:
+There are a bunch of libraries that it would be great to have in Elm:
 
   - **Data Visualization** &mdash; It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small. Make a library that just shows pretty time plots or bar charts. It has a `view` function that takes some data. From there, share your work and get feedback!
   
   - **Date Picker** &mdash; It is truly insane how much time has been spent *talking* about date pickers. I think projects like [`elm-sortable-table`](https://github.com/evancz/elm-sortable-table) and [`elm-autocomplete`](https://github.com/thebritican/elm-autocomplete) point the way to doing this in a nice way. I would start by making and API before doing any coding and asking for feedback on [`elm-dev`](https://groups.google.com/forum/#!forum/elm-dev).
 
-In all these cases, **the most important thing is to expect a feedback phase.** I have done API design sessions with a bunch of folks now, enough that I figured I should just start recording them to share. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs and the best way to improve is to learn from people who have done it before.
-  
+The best kind of library is something *you* happen to need in your daily life though. That is the best inpiration and it means you have decent understanding of the problem and a concrete use case to work towards.
+
+This brings me to the WARNING section. **API design is very hard to do well.** I would make sure you have a decent amount of experience building Elm projects before making libraries that abstract that work! So after that, make sure you:
+
+  - Read [guide.elm-lang.org](https://guide.elm-lang.org/) in full.
+  - Read the [API design guidelines](http://package.elm-lang.org/help/design-guidelines).
+  - Reread [this section](https://guide.elm-lang.org/reuse/) of the guide.
+  - Follow the links and watch the videos [here](https://guide.elm-lang.org/reuse/more.html).
+
+Meanwhile, **always be looking for feedback from folks with more experience.** I have done API design sessions with a bunch of folks now. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs, and the best way to improve is to learn from people who have done it before. So if you want to do one of these projects, understand that it should be a social endeavor.
 
 
 ## Make elm-lang.org responsive
