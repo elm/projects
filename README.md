@@ -15,14 +15,14 @@ There are a bunch of libraries that it would be great to have in Elm:
 
 The best kind of library is something *you* happen to need in your daily life though. That is the best inpiration and it means you have decent understanding of the problem and a concrete use case to work towards.
 
-This brings me to the WARNING section. **API design is very hard to do well.** I would make sure you have a decent amount of experience building Elm projects before making libraries that abstract that work! So after that, make sure you:
-
-  - Read [guide.elm-lang.org](https://guide.elm-lang.org/) in full.
-  - Read the [API design guidelines](http://package.elm-lang.org/help/design-guidelines).
-  - Reread [this section](https://guide.elm-lang.org/reuse/) of the guide.
-  - Follow the links and watch the videos [here](https://guide.elm-lang.org/reuse/more.html).
-
-Meanwhile, **always be looking for feedback from folks with more experience.** I have done API design sessions with a bunch of folks now. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs, and the best way to improve is to learn from people who have done it before. So if you want to do one of these projects, understand that it should be a social endeavor.
+> **WARNING: API design is very hard to do well.** I would make sure you have a decent amount of experience building Elm projects before making libraries that abstract that work! So after that, make sure you:
+>
+>  - Read [guide.elm-lang.org](https://guide.elm-lang.org/) in full.
+>  - Read the [API design guidelines](http://package.elm-lang.org/help/design-guidelines).
+>  - Reread [this section](https://guide.elm-lang.org/reuse/) of the guide.
+>  - Follow the links and watch the videos [here](https://guide.elm-lang.org/reuse/more.html).
+>
+> Meanwhile, **always be looking for feedback from folks with more experience.** I have done API design sessions with a bunch of folks now. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs, and the best way to improve is to learn from people who have done it before.
 
 
 ## Make elm-lang.org responsive
