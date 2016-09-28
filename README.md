@@ -25,13 +25,6 @@ The best kind of library is something *you* happen to need in your daily life th
 > Meanwhile, **always be looking for feedback from folks with more experience.** I have done API design sessions with a bunch of folks now. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs, and the best way to improve is to learn from people who have done it before.
 
 
-## Make elm-lang.org responsive
-
-Right now it is not. It would be pretty great if it was! You can check out the code [here](https://github.com/elm-lang/elm-lang.org/).
-
-The code there is basically "get the site working" quality, and it seems like a revised version would move away from inline styles to normal CSS and classes.
-
-
 ## Offline and Private Docs
 
 There are tons of nice docs on [package.elm-lang.org](http://package.elm-lang.org/). Behind the scenes, there is an Elm program that turns JSON files [like this](http://package.elm-lang.org/packages/elm-lang/core/4.0.5/documentation.json) into nice interactive pages. Here are some things that would be cool:
