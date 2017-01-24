@@ -25,19 +25,7 @@ The `elm-lang/virtual-dom` library is [quite fast](http://elm-lang.org/blog/blaz
   
 Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
 
-
-## Offline and Private Docs
-
-There are tons of nice docs on [package.elm-lang.org](http://package.elm-lang.org/). Behind the scenes, there is an Elm program that turns JSON files [like this](http://package.elm-lang.org/packages/elm-lang/core/4.0.5/documentation.json) into nice interactive pages. Here are some things that would be cool:
-
-  1. **Make a package that just parses strings into Elm types.** I have some code that does it, but it is unreleasable. It would be great for the community to have a tool like this that is well-tested!
-  
-  2. **Make a package that that displays docs for a single module.** I would expect this to be a `view` function and `decodeDocs` JSON decoder. It can rely on that type parsing package!
-
-  3. **Use all that code in `elm-reactor` or some other command line tool.** Lots of folks would like to browse documentation when they are offline. Some companies have private code, but they want the docs to be nice internally. Once you have the ability to show module docs pretty easily, making a command line tool for this is pretty easy. You run `elm-make --docs ...` and do something with the output.
-
-The benefit of this approach is that any changes to the style of the package website would propagate to *all* tools that show documentation pretty easily.
-
+<br>
 
 
 ## Make Libraries
