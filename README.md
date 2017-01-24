@@ -12,6 +12,33 @@ look and see if anything catches your eye!
 
 Now for some projects!
 
+<br>
+
+## Profiling `virtual-dom` with V8 tools
+
+The `elm-lang/virtual-dom` library is [quite fast](http://elm-lang.org/blog/blazing-fast-html-round-two). It may be possible to do better though!
+
+**Goal:** Get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives). This would allow us to:
+
+  1. Be sure that code is getting optimized (but not deoptimized!)
+  2. Know more about how much garbage is produced.
+  
+Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
+
+
+## Offline and Private Docs
+
+There are tons of nice docs on [package.elm-lang.org](http://package.elm-lang.org/). Behind the scenes, there is an Elm program that turns JSON files [like this](http://package.elm-lang.org/packages/elm-lang/core/4.0.5/documentation.json) into nice interactive pages. Here are some things that would be cool:
+
+  1. **Make a package that just parses strings into Elm types.** I have some code that does it, but it is unreleasable. It would be great for the community to have a tool like this that is well-tested!
+  
+  2. **Make a package that that displays docs for a single module.** I would expect this to be a `view` function and `decodeDocs` JSON decoder. It can rely on that type parsing package!
+
+  3. **Use all that code in `elm-reactor` or some other command line tool.** Lots of folks would like to browse documentation when they are offline. Some companies have private code, but they want the docs to be nice internally. Once you have the ability to show module docs pretty easily, making a command line tool for this is pretty easy. You run `elm-make --docs ...` and do something with the output.
+
+The benefit of this approach is that any changes to the style of the package website would propagate to *all* tools that show documentation pretty easily.
+
+
 
 ## Make Libraries
 
@@ -31,31 +58,6 @@ The best kind of library is something *you* happen to need in your daily life th
 >  - Follow the links and watch the videos [here](https://guide.elm-lang.org/reuse/more.html).
 >
 > Meanwhile, **always be looking for feedback from folks with more experience.** I have done API design sessions with a bunch of folks now. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs, and the best way to improve is to learn from people who have done it before.
-
-
-## Offline and Private Docs
-
-There are tons of nice docs on [package.elm-lang.org](http://package.elm-lang.org/). Behind the scenes, there is an Elm program that turns JSON files [like this](http://package.elm-lang.org/packages/elm-lang/core/4.0.5/documentation.json) into nice interactive pages. Here are some things that would be cool:
-
-  1. **Make a package that just parses strings into Elm types.** I have some code that does it, but it is unreleasable. It would be great for the community to have a tool like this that is well-tested!
-  
-  2. **Make a package that that displays docs for a single module.** I would expect this to be a `view` function and `decodeDocs` JSON decoder. It can rely on that type parsing package!
-
-  3. **Use all that code in `elm-reactor` or some other command line tool.** Lots of folks would like to browse documentation when they are offline. Some companies have private code, but they want the docs to be nice internally. Once you have the ability to show module docs pretty easily, making a command line tool for this is pretty easy. You run `elm-make --docs ...` and do something with the output.
-
-The benefit of this approach is that any changes to the style of the package website would propagate to *all* tools that show documentation pretty easily.
-
-
-## Profiling `virtual-dom` with V8 tools
-
-The `elm-lang/virtual-dom` library is [quite fast](http://elm-lang.org/blog/blazing-fast-html-round-two). It may be possible to do better though!
-
-**Goal:** Get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives). This would allow us to:
-
-  1. Be sure that code is getting optimized (but not deoptimized!)
-  2. Know more about how much garbage is produced.
-  
-Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
 
 
 ## In-browser REPL
