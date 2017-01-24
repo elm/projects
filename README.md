@@ -4,14 +4,22 @@ This is a big list of Elm projects that are somewhere on a very long todo list.
 Many of these ideas are great for contributions and collaborators, so take a
 look and see if anything catches your eye!
 
+**But first**, watch [this video][citep] that outlines how collaboration works in the Elm community:
+
+[![Code is the Easy Part](https://img.youtube.com/vi/DSjbTC-hvqQ/0.jpg)][citep]
+
+[citep]: https://youtu.be/DSjbTC-hvqQ
+
+Now for some projects!
+
 
 ## Make Libraries
 
-There are a bunch of libraries that it would be great to have in Elm:
+There are some libraries that it would be great to have in Elm:
 
-  - **Data Visualization** &mdash; It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small. Make a library that just shows pretty time plots or bar charts. It has a `view` function that takes some data. From there, share your work and get feedback!
+  - **Data Visualization** &mdash; It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small. Make a library that just shows pretty time plots or bar charts. It has a `view` function that takes some data. From there, share your work and get feedback! (e.g. [elm-plot](https://terezka.github.io/elm-plot/))
   
-  - **Date Picker** &mdash; It is truly insane how much time has been spent *talking* about date pickers. I think projects like [`elm-sortable-table`](https://github.com/evancz/elm-sortable-table) and [`elm-autocomplete`](https://github.com/thebritican/elm-autocomplete) point the way to doing this in a nice way. I would start by making an API before doing any coding and asking for feedback on [`elm-dev`](https://groups.google.com/forum/#!forum/elm-dev).
+  - **WebGL Stuff**
 
 The best kind of library is something *you* happen to need in your daily life though. That is the best inpiration and it means you have decent understanding of the problem and a concrete use case to work towards.
 
