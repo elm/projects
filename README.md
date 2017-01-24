@@ -30,11 +30,11 @@ Perhaps certain functions need to be broken into smaller chunks? Perhaps values 
 
 ## Make Libraries
 
-There are some libraries that it would be great to have in Elm:
+There are certain categories where Elm can be really great, and there may be opportunities for contribution:
 
   - **Data Visualization** &mdash; It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small. Make a library that just shows pretty time plots or bar charts. It has a `view` function that takes some data. From there, share your work and get feedback! (e.g. [elm-plot](https://terezka.github.io/elm-plot/))
   
-  - **WebGL Stuff**
+  - **WebGL** &mdash; There is already a nice foundation for WebGL with [elm-community/webgl](https://github.com/elm-community/elm-webgl/tree/3.0.3), but there is a ton of room for projects like [Zinggi/elm-obj-loader](https://github.com/Zinggi/elm-obj-loader) for creating terrain or objects or whatever you need. I'd recommend just using WebGL a bunch as a starting point!
 
 The best kind of library is something *you* happen to need in your daily life though. That is the best inpiration and it means you have decent understanding of the problem and a concrete use case to work towards.
 
@@ -47,14 +47,17 @@ The best kind of library is something *you* happen to need in your daily life th
 >
 > Meanwhile, **always be looking for feedback from folks with more experience.** I have done API design sessions with a bunch of folks now. This happened with `elm-webgl` and `elm-style-animation` and `elm-css` and `elm-test` and tons of others. It takes quite a few years and a good gut to get great at making these APIs, and the best way to improve is to learn from people who have done it before.
 
+<br>
 
 ## In-browser REPL
 
-This connects back to the Elm Reactor navigation progress a bit, but it can be done totally independently as well.
-
 Some modules are best examined with the time-traveling debugger, others are best examined by poking around with certain functions. It would be extremely cool if we had an in-browser REPL so that we could do either. This would let us show `Element` and `Html` values really easily!
 
+[The most successful effort](http://elmrepl.cuberoot.in/) runs `elm-repl` on a server, which is quite handy, but you could do a bunch of cool stuff if you could get the REPL going in Elm.
+
 This is super free-form. Maybe inspiration can come from iPython.
+
+<br>
 
 
 ## Improve Process Bot
