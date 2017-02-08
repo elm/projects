@@ -13,6 +13,12 @@ Now for some projects!
 
 ## WebGL
 
+[![Triangle](http://webgl.elm-community.org/examples/screenshots/triangle.jpg)](http://webgl.elm-community.org/examples/triangle.html)
+[![Cube](http://webgl.elm-community.org/examples/screenshots/cube.jpg)](http://webgl.elm-community.org/examples/cube.html)
+[![Crate](http://webgl.elm-community.org/examples/screenshots/crate.jpg)](http://webgl.elm-community.org/examples/crate.html)
+[![Thwomp](http://webgl.elm-community.org/examples/screenshots/thwomp.jpg)](http://webgl.elm-community.org/examples/thwomp.html)
+[![FirstPerson](http://webgl.elm-community.org/examples/screenshots/first-person.jpg)](http://webgl.elm-community.org/examples/first-person.html)
+
 There is already a great foundation for WebGL with [elm-community/webgl](http://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
 
 From there folks are working on projects for [terrain generation](https://twitter.com/czaplic/status/819324109674815489) and [loading 3D meshes](https://twitter.com/czaplic/status/820055313386586112).
