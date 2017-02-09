@@ -51,7 +51,7 @@ So the goal here is to **get [elm-lang/virtual-dom](https://github.com/elm-lang/
 
   1. Be sure that code is getting optimized (but not deoptimized!)
   2. Know more about how much garbage is produced.
-  
+
 Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
 
 
@@ -63,13 +63,13 @@ Perhaps certain functions need to be broken into smaller chunks? Perhaps values 
 There is [this robot](https://github.com/process-bot/) that goes around on Elm repos, trying to help issues and PRs go smoothly by letting people know about [the contribution-checklist](https://github.com/process-bot/contribution-checklist). There are two features that I think it would be great to have:
 
   1. Once a thread gets to 10 posts, process-bot would comment and tell people to close it down and (1) close it down and summarize the state of affairs in a new issue, (2) move the discussion somewhere else until it can be made more clear, or (3) keep talking in the closed thread until you decide to do 1 or 2.
-  
+
   2. When a PR is opened, have process-bot check a list of people who have given contributors agreements. If they have given one, great! If not, give them a message telling them how to proceed.
 
 The relevant code lives in [this repo](https://github.com/process-bot/contribution-checklist).
 
-<br>
 
+<br>
 
 # More Academic Stuff
 
@@ -95,4 +95,19 @@ The [MLton](http://mlton.org/) project pioneered the “monomorphizing” compil
 
 Normally functions like `map : (a -> b) -> List a -> List b` produce generic code that can work on *any* list, but if you happen to know that it is used as `map : (Int -> Int) -> List Int -> List Int` you could use a denser memory representation for the `List Int`, leading to quite serious performance improvements. Less indirection and less garbage generated!
 
-This topic has a complex relationship to Elm because whole program optimization does not mix well with the kind of asset bundling you need to do in complex webapps. Point is, it is worth learning more about this topic and sharing your thoughts about what it'd take to do this in Elm with the [elm-dev](https://groups.google.com/d/forum/elm-dev) mailing list.
+This topic has a complex relationship to Elm because whole program optimization does not mix well with the kind of asset bundling you need to do in complex webapps.
+
+**The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or mailing list post on [elm-dev](https://groups.google.com/d/forum/elm-dev).
+
+
+<br>
+
+## Explore WebAssembly
+
+[WebAssembly](http://webassembly.org/) will be maturing over the next few years. For now, there are a few questions it would be good to answer:
+
+  - What are the facilities for representing UTF-8 strings? If you make it all from bit arrays and trees, we should do a “literature review” of how strings are represented in languages like JS, Java, Go, etc.
+  - How does WebAssembly code interact with the DOM? What does that mean for Elm’s virtual-dom library?
+  - How does WebAssembly interact with WebGL? What does that mean for Elm’s webgl library?
+  
+In all these cases, **the ideal result is documentation** that gets shared with [elm-dev](https://groups.google.com/d/forum/elm-dev). Before making technical decisions and investments, certain big questions must be addressed. So it probably makes sense to do some prototyping, but the actual deliverable here is knowledge.
