@@ -1,13 +1,22 @@
 # Elm Projects
 
-This is a big list of Elm projects that are somewhere on a very long todo list. Many of these ideas are great for contributions and collaborators, so take a look and see if anything catches your eye!
+**Before you get started, watch [this video](https://youtu.be/DSjbTC-hvqQ) that outlines how collaboration works in the Elm community.**
 
-But first, **watch [this video][citep] that outlines how collaboration works in the Elm community.**
+From there, this page lists some ideas that might work well for contributions and collaboration:
 
-[citep]: https://youtu.be/DSjbTC-hvqQ
+  - For New Contributors
+    - [WebGL](#webgl)
+    - [Data Visualization](#data-visualization)
+    - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
+    - [Process Bot](#improve-process-bot)
+  - For Advanced Community Members
+    - [REPL](#in-browser-repl)
+    - [Monomorphizing](#explore-monomorphizing-compilers)
+    - [WebAssembly](#explore-webassembly)
 
-Now for some projects!
+Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
 
+* * *
 
 <br>
 
@@ -109,5 +118,5 @@ This topic has a complex relationship to Elm because whole program optimization 
   - What are the facilities for representing UTF-8 strings? If you make it all from bit arrays and trees, we should do a “literature review” of how strings are represented in languages like JS, Java, Go, etc.
   - How does WebAssembly code interact with the DOM? What does that mean for Elm’s virtual-dom library?
   - How does WebAssembly interact with WebGL? What does that mean for Elm’s webgl library?
-  
+
 In all these cases, **the ideal result is documentation** that gets shared with [elm-dev](https://groups.google.com/d/forum/elm-dev). Before making technical decisions and investments, certain big questions must be addressed. So it probably makes sense to do some prototyping, but the actual deliverable here is knowledge.
