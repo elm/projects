@@ -30,6 +30,8 @@ I think we can make it really fun and easy to create 3D graphics with Elm, and i
 
 ## Data Visualization
 
+[![Plot](assets/plot.png)](https://terezka.github.io/elm-plot/)
+
 It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small!
 
 Just start by showing pretty time plots or bar charts. It has a `view` function that takes some data. From there, share your work and get feedback! API design is hard, and there are many folks in the Elm community that can help you refine and improve your designs.
