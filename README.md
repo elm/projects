@@ -113,7 +113,7 @@ This topic has a complex relationship to Elm because whole program optimization 
 
 ## Explore WebAssembly
 
-[WebAssembly](http://webassembly.org/) will be maturing over the next few years. For now, there are a few questions it would be good to answer:
+[WebAssembly](http://webassembly.org/) will be maturing over the next few years. Without a garbage collector, it is not viable for languages like Elm. In the meantime, there are a few questions it would be good to answer:
 
   - What are the facilities for representing UTF-8 strings? If you make it all from bit arrays and trees, we should do a “literature review” of how strings are represented in languages like JS, Java, Go, etc.
   - How does WebAssembly code interact with the DOM? What does that mean for Elm’s virtual-dom library?
