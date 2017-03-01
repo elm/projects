@@ -10,7 +10,7 @@ From there, this page lists some ideas that might work well for contributions an
     - [Package Search](#package-search)
     - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
     - [Process Bot](#improve-process-bot)
-  - For Advanced Community Members
+  - [For Advanced Community Members](#more-academic-stuff)
     - [REPL](#in-browser-repl)
     - [Monomorphizing](#explore-monomorphizing-compilers)
     - [WebAssembly](#explore-webassembly)
@@ -100,7 +100,7 @@ The relevant code lives in [this repo](https://github.com/process-bot/contributi
 
 # More Academic Stuff
 
-There are a bunch of more speculative projects that it would be fun to look into, particularly if you are a student learning about compilers or programming languages. Please let folks know on [elm-dev](https://groups.google.com/forum/#!forum/elm-dev) if you are looking into any of these as they touch on lots of core stuff.
+There are a bunch of more speculative projects that it would be fun to look into, particularly if you are a student learning about compilers or programming languages. Please let folks know on [elm-dev](https://groups.google.com/forum/#!forum/elm-dev) if you are looking into any of these as they touch on lots of core stuff and coordination is inevitable if things go well.
 
 
 <br>
