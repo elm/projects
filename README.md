@@ -106,7 +106,7 @@ There are a bunch of more speculative projects that it would be fun to look into
 
 <br>
 
-# Type-Directed Autocomplete
+## Type-Directed Autocomplete
 
 The [elmjutsu](https://atom.io/packages/elmjutsu) plugin for Atom does some very nice autocompletion based on type information. I think we can push this farther though. For example, if we see the following code:
 
