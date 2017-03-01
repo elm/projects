@@ -11,6 +11,7 @@ From there, this page lists some ideas that might work well for contributions an
     - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
     - [Process Bot](#improve-process-bot)
   - [For Advanced Community Members](#more-academic-stuff)
+    - [Type-directed autocomplete](#type-directed-autocomplete)
     - [REPL](#in-browser-repl)
     - [Monomorphizing](#explore-monomorphizing-compilers)
     - [WebAssembly](#explore-webassembly)
@@ -101,6 +102,23 @@ The relevant code lives in [this repo](https://github.com/process-bot/contributi
 # More Academic Stuff
 
 There are a bunch of more speculative projects that it would be fun to look into, particularly if you are a student learning about compilers or programming languages. Please let folks know on [elm-dev](https://groups.google.com/forum/#!forum/elm-dev) if you are looking into any of these as they touch on lots of core stuff and coordination is inevitable if things go well.
+
+
+<br>
+
+# Type-Directed Autocomplete
+
+The [elmjutsu](https://atom.io/packages/elmjutsu) plugin for Atom does some very nice autocompletion based on type information. I think we can push this farther though. For example, if we see the following code:
+
+```elm
+longestName : List User -> Int
+longestName users =
+  users
+    |> List.map .name
+    |> ...
+```
+
+In the `...` we know we want to get from `List String` to `Int` so we can suggest functions like `List.length`. Perhaps we can rank suggestions based on which file or package they live in. Based on my experiences on Gmail, I am very interested to see how well we can do with simple heuristics. Assuming quality is good, this approach has many benefits over machine learning. For example, you can easily special case thing, you can tweak heuristics without retraining, and the results may be more predictable for users. Point is, focus on the simplist plausible approach before diving into fancier techniques!
 
 
 <br>
