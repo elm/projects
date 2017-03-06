@@ -9,8 +9,7 @@ From there, here are some projects, ordered by difficulty, that would make good 
   - [WebAssembly](#explore-webassembly)
   - [Type-directed autocomplete](#type-directed-autocomplete)
   - [Monomorphizing](#explore-monomorphizing-compilers)
-
-If you have a vision outside this, come and talk to the community in [the #gsoc channel on slack](https://elmlang.slack.com/messages/gsoc/). Maybe it will work too!
+  - [Other](#other)
 
 * * *
 
@@ -87,3 +86,12 @@ Normally functions like `map : (a -> b) -> List a -> List b` produce generic cod
 This topic has a complex relationship to Elm because whole program optimization does not mix well with the kind of asset bundling you need to do in complex webapps.
 
 **The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or mailing list post on [elm-dev](https://groups.google.com/d/forum/elm-dev).
+
+
+<br>
+
+## Other
+
+Maybe you have a vision outside these options? Talk it through in [the #gsoc channel on slack](https://elmlang.slack.com/messages/gsoc/) to see if it sounds good.
+
+You can also check out more ideas on [the wiki about projects and mentors](https://github.com/elm-lang/projects/wiki).
