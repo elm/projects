@@ -48,6 +48,19 @@ Perhaps certain functions need to be broken into smaller chunks? Perhaps values 
 
 <br>
 
+## Explore WebAssembly
+
+[WebAssembly](http://webassembly.org/) will be maturing over the next few years. Without a garbage collector, it is not viable for languages like Elm. In the meantime, there are a few questions it would be good to answer:
+
+  - What are the facilities for representing UTF-8 strings? If you make it all from bit arrays and trees, we should do a “literature review” of how strings are represented in languages like JS, Java, Go, etc.
+  - How does WebAssembly code interact with the DOM? What does that mean for Elm’s virtual-dom library?
+  - How does WebAssembly interact with WebGL? What does that mean for Elm’s webgl library?
+
+In all these cases, **the ideal result is documentation** that gets shared with [elm-dev](https://groups.google.com/d/forum/elm-dev). Before making technical decisions and investments, certain big questions must be addressed. So it probably makes sense to do some prototyping, but the actual deliverable here is knowledge.
+
+
+<br>
+
 ## Type-Directed Autocomplete
 
 The [elmjutsu](https://atom.io/packages/elmjutsu) plugin for Atom does some very nice autocompletion based on type information. I think we can push this farther though. For example, if we see the following code:
@@ -74,16 +87,3 @@ Normally functions like `map : (a -> b) -> List a -> List b` produce generic cod
 This topic has a complex relationship to Elm because whole program optimization does not mix well with the kind of asset bundling you need to do in complex webapps.
 
 **The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or mailing list post on [elm-dev](https://groups.google.com/d/forum/elm-dev).
-
-
-<br>
-
-## Explore WebAssembly
-
-[WebAssembly](http://webassembly.org/) will be maturing over the next few years. Without a garbage collector, it is not viable for languages like Elm. In the meantime, there are a few questions it would be good to answer:
-
-  - What are the facilities for representing UTF-8 strings? If you make it all from bit arrays and trees, we should do a “literature review” of how strings are represented in languages like JS, Java, Go, etc.
-  - How does WebAssembly code interact with the DOM? What does that mean for Elm’s virtual-dom library?
-  - How does WebAssembly interact with WebGL? What does that mean for Elm’s webgl library?
-
-In all these cases, **the ideal result is documentation** that gets shared with [elm-dev](https://groups.google.com/d/forum/elm-dev). Before making technical decisions and investments, certain big questions must be addressed. So it probably makes sense to do some prototyping, but the actual deliverable here is knowledge.
