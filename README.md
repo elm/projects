@@ -2,7 +2,7 @@
 
 **Before you get started, watch [this video](https://youtu.be/DSjbTC-hvqQ) that outlines how collaboration works in the Elm community.**
 
-From there, this page lists some ideas that might work well for contributions and collaboration. This is a general list for Elm users though, and **not all projects are ideal for Google Summer of Code.** Projects that are good for GSoC are marked with a ☀️️ and more details on what makes a good GSoC project is available [here](http://elm-lang.org/blog/google-summer-of-code-2017).
+From there, this page lists some ideas that might work well for contributions and collaboration. This is a general list for Elm users though, and **not all projects are ideal for Google Summer of Code.** Projects that are particularly good for GSoC are marked with a ☀️️ and more details on what makes a good GSoC project is available [here](http://elm-lang.org/blog/google-summer-of-code-2017). If you have a vision outside this, ask about it, it may work!
 
 
   - For New Contributors
