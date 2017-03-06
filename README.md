@@ -1,4 +1,4 @@
-# Elm Projects
+# Elm Projects for GSoC
 
 Before you get started, read [this blog post about Elm + GSoC](http://elm-lang.org/blog/google-summer-of-code-2017) and watch [this video](https://youtu.be/DSjbTC-hvqQ?t=14m5s) that outlines how collaboration works in the Elm community.
 
