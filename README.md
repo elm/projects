@@ -36,8 +36,6 @@ I think it makes the most sense to focus on 1 and 2, and to not get hung up on t
 
 ## Profiling `virtual-dom` with V8 tools
 
-[![Plot](assets/speed.png)](http://elm-lang.org/blog/blazing-fast-html-round-two)
-
 The `elm-lang/virtual-dom` library is [quite fast](http://elm-lang.org/blog/blazing-fast-html-round-two). It may be possible to do better though!
 
 So the goal here is to **get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives)**. This would allow us to:
