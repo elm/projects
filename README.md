@@ -7,14 +7,14 @@ From there, this page lists some ideas that might work well for contributions an
   - For New Contributors
     - [WebGL](#webgl)
     - [Data Visualization](#data-visualization)
-    - [Package Search](#package-search) ☀️️
-    - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools) ☀️️
+    - ☀️️ [Package Search](#package-search)
+    - ☀️️ [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
     - [Process Bot](#improve-process-bot)
   - [For Advanced Community Members](#more-academic-stuff)
-    - [Type-directed autocomplete](#type-directed-autocomplete) ☀️️
+    - ☀️️ [Type-directed autocomplete](#type-directed-autocomplete)
     - [REPL](#in-browser-repl)
-    - [Monomorphizing](#explore-monomorphizing-compilers) ☀️️
-    - [WebAssembly](#explore-webassembly) ☀️️
+    - ☀️️ [Monomorphizing](#explore-monomorphizing-compilers)
+    - ☀️️ [WebAssembly](#explore-webassembly)
     
 **Not all projects are good for Google Summer of Code.** Projects that are good for GSoC are marked with a ☀️️ and more details on what makes a good GSoC project is available [here](http://elm-lang.org/blog/google-summer-of-code-2017).
 
