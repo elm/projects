@@ -2,7 +2,8 @@
 
 **Before you get started, watch [this video](https://youtu.be/DSjbTC-hvqQ) that outlines how collaboration works in the Elm community.**
 
-From there, this page lists some ideas that might work well for contributions and collaboration:
+From there, this page lists some ideas that might work well for contributions and collaboration. This is a general list for Elm users though, and **not all projects are ideal for Google Summer of Code.** Projects that are good for GSoC are marked with a ☀️️ and more details on what makes a good GSoC project is available [here](http://elm-lang.org/blog/google-summer-of-code-2017).
+
 
   - For New Contributors
     - [WebGL](#webgl)
@@ -15,8 +16,6 @@ From there, this page lists some ideas that might work well for contributions an
     - [REPL](#in-browser-repl)
     - ☀️️ [Monomorphizing](#explore-monomorphizing-compilers)
     - ☀️️ [WebAssembly](#explore-webassembly)
-    
-**Not all projects are good for Google Summer of Code.** Projects that are good for GSoC are marked with a ☀️️ and more details on what makes a good GSoC project is available [here](http://elm-lang.org/blog/google-summer-of-code-2017).
 
 Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
 
