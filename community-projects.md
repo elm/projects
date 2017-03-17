@@ -1,6 +1,6 @@
 # Elm Projects
 
-Before you get started, **watch [this video](https://youtu.be/DSjbTC-hvqQ)** that outlines how collaboration works in the Elm community.
+**Before you get started,** watch [this video](https://youtu.be/DSjbTC-hvqQ?t=14m5s) that outlines how collaboration works in the Elm community.
 
 From there, this page lists some ideas that might work well for contributions and collaboration:
 
@@ -20,7 +20,7 @@ From there, this page lists some ideas that might work well for contributions an
   - [Monomorphizing](#explore-monomorphizing-compilers)
   - [WebAssembly](#explore-webassembly)
 
-Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
+Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ?t=14m5s) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
 
 * * *
 
