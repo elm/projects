@@ -5,6 +5,7 @@
 From there, this page lists some ideas that might work well for contributions and collaboration:
 
   - For New Contributors
+    - [Markdown Parser](#markdown-parser)
     - [WebGL](#webgl)
     - [Data Visualization](#data-visualization)
     - [Package Search](#package-search)
@@ -19,6 +20,17 @@ From there, this page lists some ideas that might work well for contributions an
 Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
 
 * * *
+
+<br>
+
+## Markdown Parser
+
+It would be great to have a markdown parser written entirely in Elm.
+
+This is a hard project, so I recommend looking into [jgm/cheapskate](https://github.com/jgm/cheapskate) to see a very thoughtful and efficient implementation. The author is super smart and particularly knowledgable on this topic!
+
+I would start by exploring with [`elm-tools/parser`](https://github.com/elm-tools/parser), but perhaps something more heavy duty will be necessary in the end.
+
 
 <br>
 
