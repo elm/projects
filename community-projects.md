@@ -6,9 +6,9 @@ From there, this page lists some ideas that might work well for contributions an
 
   - For New Contributors
     - [Markdown Parser](#markdown-parser)
-    - [WebGL](#webgl)
     - [Data Visualization](#data-visualization)
     - [Package Search](#package-search)
+    - [WebGL](#webgl)
     - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
     - [Process Bot](#improve-process-bot)
   - [For Advanced Community Members](#more-academic-stuff)
@@ -30,17 +30,6 @@ It would be great to have a markdown parser written entirely in Elm.
 This is a hard project, so I recommend looking into [jgm/cheapskate](https://github.com/jgm/cheapskate) to see a very thoughtful and efficient implementation. The author is super smart and particularly knowledgable on this topic!
 
 I would start by exploring with [`elm-tools/parser`](https://github.com/elm-tools/parser), but perhaps something more heavy duty will be necessary in the end.
-
-
-<br>
-
-## WebGL
-
-There is already a great foundation for WebGL with [elm-community/webgl](http://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
-
-From there folks are working on projects for [terrain generation](https://twitter.com/czaplic/status/819324109674815489) and [loading 3D meshes](https://twitter.com/czaplic/status/820055313386586112).
-
-I think we can make it really fun and easy to create 3D graphics with Elm, and it is a very deep topic. I recommend exploring topics like [picking](http://away3d.com/tutorials/Introduction_to_Mouse_Picking),  [entity-component systems](https://en.wikipedia.org/wiki/Entity%E2%80%93component%E2%80%93system), [crazy shaders](https://www.shadertoy.com/), etc. by digging into a project of your own and (1) seeing what you need and (2) sharing your observations in blog posts on [/r/elm](https://www.reddit.com/r/elm/).
 
 
 <br>
@@ -69,6 +58,17 @@ Here are some ideas:
 Ideally this service can live on its own server. It would take in JSON and give out JSON. So if the search server goes down, it does not take down the package website. This makes it a great project because it minimizes technical coordination in the early phases.
 
 I think it makes the most sense to focus on 1 and 2, and to not get hung up on the particular details of rankings. For any official use those details will need to be carefully tweaked, so perhaps the best system is one that makes it easy to analyze docs in various ways.
+
+
+<br>
+
+## WebGL
+
+There is already a great foundation for WebGL with [elm-community/webgl](http://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
+
+From there folks are working on projects for [terrain generation](https://twitter.com/czaplic/status/819324109674815489) and [loading 3D meshes](https://twitter.com/czaplic/status/820055313386586112).
+
+I think we can make it really fun and easy to create 3D graphics with Elm, and it is a very deep topic. I recommend exploring topics like [picking](http://away3d.com/tutorials/Introduction_to_Mouse_Picking),  [entity-component systems](https://en.wikipedia.org/wiki/Entity%E2%80%93component%E2%80%93system), [crazy shaders](https://www.shadertoy.com/), etc. by digging into a project of your own and (1) seeing what you need and (2) sharing your observations in blog posts on [/r/elm](https://www.reddit.com/r/elm/).
 
 
 <br>
