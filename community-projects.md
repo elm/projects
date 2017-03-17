@@ -1,8 +1,11 @@
-# Elm Projects
+<hr>
 
 **Before you get started,** watch [this video](https://youtu.be/DSjbTC-hvqQ?t=14m5s) that outlines how collaboration works in the Elm community.
 
-From there, this page lists some ideas that might work well for contributions and collaboration:
+<hr>
+<br>
+
+# Elm Projects
 
 ### For New Contributors
 
