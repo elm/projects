@@ -36,12 +36,6 @@ I would start by exploring with [`elm-tools/parser`](https://github.com/elm-tool
 
 ## WebGL
 
-[![Triangle](http://webgl.elm-community.org/examples/screenshots/triangle.jpg)](http://webgl.elm-community.org/examples/triangle.html)
-[![Cube](http://webgl.elm-community.org/examples/screenshots/cube.jpg)](http://webgl.elm-community.org/examples/cube.html)
-[![Crate](http://webgl.elm-community.org/examples/screenshots/crate.jpg)](http://webgl.elm-community.org/examples/crate.html)
-[![Thwomp](http://webgl.elm-community.org/examples/screenshots/thwomp.jpg)](http://webgl.elm-community.org/examples/thwomp.html)
-[![FirstPerson](http://webgl.elm-community.org/examples/screenshots/first-person.jpg)](http://webgl.elm-community.org/examples/first-person.html)
-
 There is already a great foundation for WebGL with [elm-community/webgl](http://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
 
 From there folks are working on projects for [terrain generation](https://twitter.com/czaplic/status/819324109674815489) and [loading 3D meshes](https://twitter.com/czaplic/status/820055313386586112).
@@ -52,8 +46,6 @@ I think we can make it really fun and easy to create 3D graphics with Elm, and i
 <br>
 
 ## Data Visualization
-
-[![Plot](assets/plot.png)](https://terezka.github.io/elm-plot/)
 
 It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small!
 
