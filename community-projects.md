@@ -1,6 +1,6 @@
 # Elm Projects
 
-**Before you get started, watch [this video](https://youtu.be/DSjbTC-hvqQ) that outlines how collaboration works in the Elm community.**
+Before you get started, **watch [this video](https://youtu.be/DSjbTC-hvqQ)** that outlines how collaboration works in the Elm community.
 
 From there, this page lists some ideas that might work well for contributions and collaboration:
 
