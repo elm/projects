@@ -4,18 +4,21 @@
 
 From there, this page lists some ideas that might work well for contributions and collaboration:
 
-  - For New Contributors
-    - [Markdown Parser](#markdown-parser)
-    - [Data Visualization](#data-visualization)
-    - [Package Search](#package-search)
-    - [WebGL](#webgl)
-    - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
-    - [Process Bot](#improve-process-bot)
-  - [For Advanced Community Members](#more-academic-stuff)
-    - [Type-directed autocomplete](#type-directed-autocomplete)
-    - [REPL](#in-browser-repl)
-    - [Monomorphizing](#explore-monomorphizing-compilers)
-    - [WebAssembly](#explore-webassembly)
+### For New Contributors
+
+  - [Markdown Parser](#markdown-parser)
+  - [Data Visualization](#data-visualization)
+  - [Package Search](#package-search)
+  - [WebGL](#webgl)
+  - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
+  - [Process Bot](#improve-process-bot)
+
+### For Advanced Community Members
+
+  - [Type-directed autocomplete](#type-directed-autocomplete)
+  - [REPL](#in-browser-repl)
+  - [Monomorphizing](#explore-monomorphizing-compilers)
+  - [WebAssembly](#explore-webassembly)
 
 Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
 
