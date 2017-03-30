@@ -126,7 +126,26 @@ longestName users =
     |> ...
 ```
 
-In the `...` we know we want to get from `List String` to `Int` so we can suggest functions like `List.length`. Perhaps we can rank suggestions based on which file or package they live in. Based on my experiences on Gmail, I am very interested to see how well we can do with simple heuristics. Assuming quality is good, this approach has many benefits over machine learning. For example, you can easily special case thing, you can tweak heuristics without retraining, and the results may be more predictable for users. Point is, focus on the simplist plausible approach before diving into fancier techniques!
+In the `...` we know we want to get from `List String` to `Int` so we can suggest functions like `List.length`.
+
+The best way to approach this problem is to try to implement the following function:
+
+```elm
+suggest : Dict String Type -> Type -> List Expr
+suggest knownValues targetType =
+  ...
+  
+type Type = Var String | Lambda Type Type | ...
+-- simple representation of types
+
+type Expr = Call String (List String)
+-- in the simplest version, you suggest very minimal expressions
+-- things like `List.foldl (+) 0`
+```
+
+By doing this, you decouple your work from other stuff. That means you can focus on *making suggestions*. If it goes well, integrating this with other things can be a separate project.
+
+From there, perhaps we can rank suggestions based on which file or package they live in. Based on my experiences on Gmail, I am very interested to see how well we can do with simple heuristics. Assuming quality is good, this approach has many benefits over machine learning. For example, you can easily special case thing, you can tweak heuristics without retraining, and the results may be more predictable for users. Point is, focus on the simplist plausible approach before diving into fancier techniques!
 
 
 <br>
