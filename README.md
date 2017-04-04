@@ -42,7 +42,7 @@ I would start by exploring with [`elm-tools/parser`](https://github.com/elm-tool
 
 ## Data Visualization
 
-Elm is great data visualization in theory, and projects like [elm-plot](https://terezka.github.io/elm-plot/) are beginning to make it great in practice!
+Elm is great for data visualization in theory, and projects like [elm-plot](https://terezka.github.io/elm-plot/) are beginning to make it great in practice!
 
 Start by asking, “what kind of visualization do I need?” See if it exists as an Elm library. If not, create a `view` function that uses [`elm-lang/svg`](https://github.com/elm-lang/svg) to display what you need.
 
