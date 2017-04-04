@@ -42,11 +42,14 @@ I would start by exploring with [`elm-tools/parser`](https://github.com/elm-tool
 
 ## Data Visualization
 
-It seems obvious that Elm would be great for data visualization. Often folks think &ldquo;I want D3&rdquo; and then are unsure how to do it so they give up. That is a silly strategy. Instead start small!
+Elm is great data visualization in theory, and projects like [elm-plot](https://terezka.github.io/elm-plot/) are beginning to make it great in practice!
 
-Just start by showing pretty time plots or bar charts. It has a `view` function that takes some data. From there, share your work and get feedback! API design is hard, and there are many folks in the Elm community that can help you refine and improve your designs.
+Start by asking, “what kind of visualization do I need?” See if it exists as an Elm library. If not, create a `view` function that uses [`elm-lang/svg`](https://github.com/elm-lang/svg) to display what you need.
 
-Good examples in this area include [elm-plot](https://terezka.github.io/elm-plot/)!
+From there, share your work and get feedback! API design is hard, and there are many folks in the Elm community that can help you refine and improve your designs.
+
+**Note:** Resources like [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi) by Edward Tufte are great for learning more about the *art* of visual communication. It's not just about an API!
+
 
 
 <br>
