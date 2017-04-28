@@ -18,11 +18,11 @@ It would be a mistake to say, “Oh, Python can be used for a wide variety of th
 
 [The list on wikipedia](https://en.wikipedia.org/wiki/General-purpose_programming_language) has quite a few entries. Let’s examine a few.
 
-| Language | Strong For | Weak For |
-+----------+------------+----------+
-| C | operating systems | web programming |
-| Java | servers | emdedded systems |
-| Python | scripting | iPhone apps |
+| Language | Strong For        | Weak For         |
+|----------|-------------------|------------------|
+| C        | operating systems | web programming  |
+| Java     | servers           | emdedded systems |
+| Python   | scripting         | iPhone apps      |
 
 Why is it that these “general-purpose” languages have such clear niches?
 
