@@ -23,9 +23,7 @@
   - [Monomorphizing](#explore-monomorphizing-compilers)
   - [WebAssembly](#explore-webassembly)
 
-Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ?t=14m5s) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
-
-You should also check out [these comments](roadmap.md) on some common “roadmap” questions about Elm. That can help you fit your project into the overall direction of the language.
+Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ?t=14m5s) and read [these comments](roadmap.md) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
 
 * * *
 
