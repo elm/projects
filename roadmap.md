@@ -56,7 +56,7 @@ Most cases are not nearly so extreme. If you are one of the 99% of developers wi
 
 There is a great deal of excitement about Elm on servers. I think this is partially due to a couple common misconceptions about running the same language on the front-end and back-end:
 
-  * Folks want to share types. No more JSON! That *sounds* amazing, but what happens when a user keeps a tab open for months? If you share types directly, changing types will break their code. Creating a serialization format that can evolve with your product is a very hard problem and simply “having types” does not solve it.
+  * Folks want to share types. No more JSON! That *sounds* amazing, but what happens when a user keeps a tab open for a while? If you share types directly, changing types will break their code. Creating a serialization format that can evolve with your product is a very hard problem, [as elaborated upon here](notes/on-sharing-types.md), and simply “having types” does not solve it.
 
   * People want server-side rendering of HTML. Running a server all in Elm does not really give you this. I mean, it can, but it is way more complicated than having a tool that can take Elm modules and spit out HTML. The simpler version can work with any existing server, which is why that is the approach being explored for 0.19!
 
