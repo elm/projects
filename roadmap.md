@@ -60,7 +60,7 @@ There is a great deal of excitement about Elm on servers. I think this is partia
 
   * People want server-side rendering of HTML. Running a server all in Elm does not really give you this. I mean, it can, but it is way more complicated than having a tool that can take Elm modules and spit out HTML. The simpler version can work with any existing server, which is why that is the approach being explored for 0.19!
 
-  * Folks like to think languages are “general purpose” and if the language is good, it should be good at *anything*. People say C++ is a general purpose language, but it is not so nice for web apps. People say Python is a general purpose language, but it is not so good for operating systems. And you cannot just “make Python good at operating systems” by compiling it to C.
+  * Folks like to think languages are “general purpose” and if the language is good, it should be good at *anything*. People say C++ is a general purpose language, but it is not so nice for web apps. People say Python is a general purpose language, but it is not so good for operating systems. And you cannot just “make Python good at operating systems” by compiling it to C. More notes on “general-purpose” as a questionable goal [here](notes/on-general-purpose.md).
 
 I think the main thing you get from “Elm on servers” is the ability to share some libraries and to have common tooling. That is still pretty neat, and perhaps worthwhile. That said, **I think it is a better strategy to make Elm an extremely strong choice for web apps before expanding to other domains.** There is still a lot of work to do for web apps!
 
