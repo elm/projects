@@ -1,4 +1,4 @@
-# “General-Purpose” Languages
+# On “General-Purpose” Languages
 
 Many people believe ask “will Elm become a general-purpose language?” What are they talking about?
 
