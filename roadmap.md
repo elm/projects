@@ -52,11 +52,11 @@ Most cases are not nearly so extreme. If you are one of the 99% of developers wi
 
 ## Where is the localStorage package?
 
-**Expanding [web platform](https://platform.html5.org/) support is a high priority, just behind the SPA stuff.**
+**Expanding [web platform](https://platform.html5.org/) support is a high priority, just behind single-page apps.**
 
-First, many people think expanding “web platform” support is easy. “Just copy the JS API into Elm as tasks!” The whole point of Elm is to rethink common problems and try to do better. For example, Elm existed for more than *two years* before we added HTML support. Rather than having a fragmented ecosystem of competing HTML libraries of varying quality, we have one library that is great. For many Elm users, the fact that there are clear defaults that work well is a huge draw.
+First, many people think expanding “web platform” support is easy. “Just copy the JS API into Elm as tasks!” The whole point of Elm is to rethink common problems and try to do better, and figuring out how to do it “the right way” in a typed functional language with no side effects takes time. For example, Elm existed for more than *two years* before we added HTML support. Imagine what people were saying to me then! But now, rather than having a fragmented ecosystem of competing HTML libraries of varying quality, we have one library that is great. For many Elm users, the fact that there are clear defaults that work well within the ecosystem is a huge draw.
 
-Second, the general policy is to prioritize things that *cannot be done* over things that *could be done better*. Obviously it would be great if the whole “web platform” was available in Elm today, but anything that is missing can be done with [ports](https://guide.elm-lang.org/interop/javascript.html). And again, after the SPA stuff is done, expanding the “web platform” seems like the highest priority.
+Second, the general policy is to prioritize things that *cannot be done* over things that *could be done better*. Obviously it would be great if the whole “web platform” was available in Elm today, but anything that is missing can be done with [ports](https://guide.elm-lang.org/interop/javascript.html). And again, after features for single-page apps, expanding the “web platform” seems like the highest priority.
 
 > **Note:** When using ports for something complex, it is often helpful to create a client/server relationship between Elm and JS. Have one port out that gives `Json.Encode.Value` representing some request and have one port in that gives `Json.Decode.Value` that gives responses. So rather than trying to wrap each JS function independently, you draw a clear abstraction boundary between Elm and JS.
 
