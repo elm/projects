@@ -14,7 +14,7 @@ So is this term useful for any real question? “Can I use Python for a wide var
 It would be a mistake to say, “Oh, Python can be used for a wide variety of things. Great! I will use it for this embedded system.”
 
 
-## Examples of Niches
+## Examples of “general-purpose” languages
 
 [The list on wikipedia](https://en.wikipedia.org/wiki/General-purpose_programming_language) has quite a few entries. Let’s examine a few.
 
