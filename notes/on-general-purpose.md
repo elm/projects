@@ -1,6 +1,6 @@
 # On “General-Purpose” Languages
 
-Many people believe ask “will Elm become a general-purpose language?” What are they talking about?
+Many people ask me “will Elm become a general-purpose language?” or “do you think Elm is a general-purpose language?” What are they talking about?
 
 
 ## What is a general-purpose language?
@@ -14,7 +14,7 @@ So is this term useful for any real question? “Can I use Python for a wide var
 It would be a mistake to say, “Oh, Python can be used for a wide variety of things. Great! I will use it for this embedded system.”
 
 
-## Further Evidence
+## Examples of Niches
 
 [The list on wikipedia](https://en.wikipedia.org/wiki/General-purpose_programming_language) has quite a few entries. Let’s examine a few.
 
@@ -31,10 +31,12 @@ Language design choices like “how does memory management work?” inherently s
 Ecosystems also form around certain domains. Python may seem like an odd choice for scientific computing from a performance perspective, but it has a great ecosystem for that domain. Without the ecosystem, it would be silly to do this, and you can observe that this is true in Ruby and Perl and PHP.
 
 
-## Thoughts on Elm
+## Relevance to Elm
 
-When a young language says “X is a general purpose language” I hear “I am not sure what X is for but I am making it anyway”. I think languages like Elm, Elixir, and Julia have had success because they focused on a particular domain and attempted to understand the *people* who work in those domains.
+When a young language says “X is a general-purpose language” I hear “I am not sure what X is for but I am making it anyway”. I think languages like Elm, Elixir, and Julia have had success because they focused on a particular domain and attempted to understand the *people* who work in those domains.
 
 So what is the value of being general-purpose early on? Why spend a bunch of time early in the life of a language to transition from “great in one domain” to “kind of bad in three domains”? Many languages have tried this, and you probably have not heard of them because it is not a good opening strategy.
 
-I prefer to have a coherent strategy about expanding to other domains. Why expand to another domain? What strengths could Elm bring there? How much work would it be? Should work on web apps slow down for this? What is best for the long-term health of the project? Etc. I think it is also important to clearly inform people what the language is good at right now. That way they do not waste tons of their time based on the belief that “I like language X for problem X, so it surely can be good at problem Y as well.”
+Languages branch out after establishing their niche. Clojure began for servers and branched out to web apps. Python began for scripting and branched out to scientific computing, education, etc.
+
+So I prefer to have a coherent strategy about expanding to other domains. Why expand to another domain? What strengths could Elm bring there? How much work would it be? Should work on web apps slow down for this? What is best for the long-term health of the project? Etc. I think it is also important to clearly inform people what the language is decent at right now. That way they do not waste their time on paths we know that Python or Erlang or C can do better *right now*. I ask that you respect people’s time as well if you do experiments with Elm.
