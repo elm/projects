@@ -39,4 +39,4 @@ So why spend a bunch of time early in the life of a language to transition from 
 
 I prefer to have a coherent strategy about expanding to other domains. Why expand to another domain? What strengths could Elm bring there? How much work would it be? Should work on web apps slow down for this? What is best for the long-term health of the project? Etc. I also think it is important to clearly inform people what the language is decent at *right now*. That way they do not waste their time on paths we already know that Python or Erlang or C can do better *right now*.
 
-> If you want to experiment with Elm in other domains, please (1) let folks know on elm-dev as soon as possible and (2) label your work as experimental. This way it can be clearer to everyone how to use their time efficiently.
+> If you want to experiment with Elm in other domains, please (1) let folks know on elm-dev as soon as possible and (2) label your work as experimental very clearly. This way it can be clearer to everyone how to use their time efficiently.
