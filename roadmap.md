@@ -18,7 +18,7 @@ If you are looking for ways to contribute, please check out [the suggestions](RE
 
 A lot of people think that (1) languages are just features that need implementing, (2) these features should be placed on a calendar, and (3) we should throw people at the features until they are done early. This is not how Elm has developed!
 
-First, when it comes to language design, doing things *right* is way more important than doing things *right now*. It is easy to think short term and rush features, but languages live for decades, and there are no take-backs on mistakes.
+First, when it comes to language design, I think doing things *right* is far more valuable than doing things *right now*. It is easy to think short term and rush features, but languages live for decades, and there are no take-backs on mistakes.
 
 Second, looking back, playfulness and inspiration have been crucial parts of Elm’s development. For example, the friendly error messages began with a project to provide JSON output to code editors. There was no huge demand for JSON output, but after spending a bit of time on the project, it became clear that the error messages could be dramatically improved. No one knew that was possible! That means no one was asking for it either! So by any reasonable prioritization scheme, this was a “pointless” project, but it turned into an extremely valuable part of Elm.
 
