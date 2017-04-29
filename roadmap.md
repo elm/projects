@@ -3,8 +3,8 @@
 People want to know what is going to happen with Elm. Hopefully this document helps!
 
   - [What is the timeline?](#what-is-the-timeline)
-  - [How do I make a single-page app?](#how-do-i-make-a-single-page-app)
-  - [Where is the localStorage package?](#where-is-the-localstorage-package)
+  - What is next? / [How do I make a single-page app?](#how-do-i-make-a-single-page-app)
+  - More Web Platform packages? / [Where is the localStorage package?](#where-is-the-localstorage-package)
   - [Can I use Elm on servers?](#can-i-use-elm-on-servers)
   - [When will Elm compile to X?](#when-will-elm-compile-to-x)
 
