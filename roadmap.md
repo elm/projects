@@ -54,7 +54,7 @@ Most cases are not nearly so extreme. If you are one of the 99% of developers wi
 
 **Expanding “web platform” support is a high priority, just behind the SPA stuff.**
 
-First, many people think expanding “web platform” support is easy. “Just copy the JS API into Elm as tasks!” The whole point of Elm is to rethink common problems and try to do better. For example, Elm existed for more than *two years* before we added HTML support. Rather than having a fragmented ecosystem of competing HTML libraries of varying quality, we have one library that is great. For many Elm users, the fact that there are clear defaults that work well is a huge draw.
+First, many people think expanding “web platform” support is easy. “Just copy the JS API into Elm as tasks!” The whole point of Elm is to rethink common problems and try to do better. For example, Elm existed for more than *two years* before we added HTML support. Rather than having a fragmented ecosystem of competing HTML libraries of varying quality, we have one library that is great. For many Elm users, the fact that there are clear defaults that work well is a huge draw. With `XMLHttpRequest` it took about three years!
 
 Second, the general policy is to prioritize things that *cannot be done* over things that *could be done better*. Obviously it would be great if the whole “web platform” was available in Elm today, but anything that is missing can be done with [ports](https://guide.elm-lang.org/interop/javascript.html). And again, after the SPA stuff is done, expanding the “web platform” seems like the highest priority.
 
