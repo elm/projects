@@ -33,11 +33,10 @@ Point is, I think scheduling progress is kind of a silly idea. “That conceptua
 
 The major focus of 0.19 will be creating “single-page apps” in Elm. The features that fall under that umbrella include:
 
-  - Server-side rendering
-  - Tree shaking (a.k.a. dead code elimination)
-  - Code splitting
-  - Lazy loading
-  - Routing
+  - Server-side rendering &mdash; sending HTML with the initial response
+  - Tree shaking &mdash; trimming out unused code (usually called dead code elimination or DCE)
+  - Code splitting &mdash; cutting up code into smaller chunks for better caching
+  - Lazy loading &mdash; only sending the code chunks needed for a particular page
 
 Once it is possible to create “real” single-page apps thanks to these features, we will also have friendly documentation about how to do it.
 
