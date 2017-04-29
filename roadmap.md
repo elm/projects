@@ -4,6 +4,7 @@ People want to know what is going to happen with Elm. Hopefully this document he
 
   - [What is the timeline?](#what-is-the-timeline)
   - [How do I make a single-page app?](#how-do-i-make-a-single-page-app)
+  - [Where is the localStorage package?](#where-is-the-localstorage-package)
   - [Can I use Elm on servers?](#can-i-use-elm-on-servers)
   - [When will Elm compile to X?](#when-will-elm-compile-to-x)
 
@@ -49,6 +50,25 @@ Most cases are not nearly so extreme. If you are one of the 99% of developers wi
 <br>
 
 
+## Where is the localStorage package?
+
+**Expanding “web platform” support is a high priority, just behind the SPA stuff.**
+
+First, many people think expanding “web platform” support is easy. “Just copy the JS API into Elm as tasks!” The whole point of Elm is to rethink common problems and try to do better. For example, Elm existed for more than *two years* before we added HTML support. Rather than having a fragmented ecosystem of competing HTML libraries of varying quality, we have one library that is great. For many Elm users, the fact that there are clear defaults that work well is a huge draw.
+
+Second, the general policy is to prioritize things that *cannot be done* over things that *could be done better*. Obviously it would be great if the whole “web platform” was available in Elm today, but anything that is missing can be done with [ports](https://guide.elm-lang.org/interop/javascript.html). And again, after the SPA stuff is done, expanding the “web platform” seems like the highest priority.
+
+> **Note:** When using ports for something complex, it is often helpful to create a client/server relationship between Elm and JS. Have one port out that gives `Json.Encode.Value` representing some request and have one port in that gives `Json.Decode.Value` that gives responses. So rather than trying to wrap each JS function independently, you draw a clear abstraction boundary between Elm and JS.
+
+Third, a great deal of work has actually gone into `localStorage` and IndexedDB already, but the results were not good enough to be released. If a library like this is released, it will need to be supported forever because we cannot just switch to a better API when we figure it out. Programmers may store important information on thousands of computers out in the world, and losing that data could hurt their business. So until we can offer a really solid approach here (one that is cross-browser, will grow with your application, and can upgrade browser data with new releases) we prefer to be clear that we do not offer this yet.
+
+Maybe these prioritization choices do not appeal to your sensibility or today’s tradeoffs do not seem to work for your scenario. That is fine! It is totally reasonable to circle back to Elm after “web platform” support has expanded and see if it works better for you then.
+
+> **Note:** Many people wonder “why not have the community expand the web platform?” I have tried to address this question [here](https://groups.google.com/d/msg/elm-dev/1JW6wknkDIo/H9ZnS71BCAAJ) and [here](https://groups.google.com/d/msg/elm-dev/bAHD_8PbgKE/X-z67wTdCAAJ). There are other languages out there that make different choices on this question, and I recommend checking them out. They may suit you better!
+
+<br>
+
+
 ## Can I use Elm on servers?
 
 **No, and if we started today, this would still be a multi-year project.**
@@ -69,6 +89,8 @@ And before you try to do it yourself...
 
 
 ## When will Elm compile to X?
+
+**Compiling through X probably does not accomplish what you hope.**
 
 Many folks tell me “Elm should compile to X” where X is a thing they like. Here are people suggesting [Go](https://twitter.com/zvozin/status/847860742787223553), [Lua](https://groups.google.com/d/msg/elm-dev/Mi9j3nVD5NE/11akZGmNAgAJ) and [Erlang](https://groups.google.com/d/msg/elm-dev/Mi9j3nVD5NE/Pf1GXS2QAgAJ). But why not go through OCaml or C# or Java or or Scala or F# or Haskell or ES6 or C++ or Rust or node.js?
 
