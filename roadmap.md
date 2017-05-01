@@ -92,7 +92,7 @@ And before you try to do it yourself...
 
 **Compiling through X probably does not accomplish what you hope.**
 
-Many folks tell me “Elm should compile to X” where X is a thing they like. Here are people suggesting [Go](https://twitter.com/zvozin/status/847860742787223553), [Lua](https://groups.google.com/d/msg/elm-dev/Mi9j3nVD5NE/11akZGmNAgAJ) and [Erlang](https://groups.google.com/d/msg/elm-dev/Mi9j3nVD5NE/Pf1GXS2QAgAJ). But why not go through OCaml or C# or Java or or Scala or F# or Haskell or ES6 or C++ or Rust or node.js?
+Many folks tell me “Elm should compile to X” where X is a thing they like. Here are people suggesting [Go](https://twitter.com/zvozin/status/847860742787223553), [Lua](https://groups.google.com/d/msg/elm-dev/Mi9j3nVD5NE/11akZGmNAgAJ) and [Erlang](https://groups.google.com/d/msg/elm-dev/Mi9j3nVD5NE/Pf1GXS2QAgAJ). But why not go through OCaml or C# or Java or Scala or F# or Haskell or ES6 or C++ or Rust or node.js?
 
 **The hard part of supporting a domain is not the compiler. It is making a good ecosystem.** Python is nice for scientific computing because of things like NumPy and SciPy, not because of whatever backend. Elm is nice for front-end because of the ecosystem, like the HTML library and The Elm Architecture, not the particulars of code generation. **Just putting a typed functional language in a domain does not mean it will be fun and productive in practice!**
 
