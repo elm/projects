@@ -56,14 +56,14 @@ From there, share your work and get feedback! API design is hard, and there are 
 
 ## Package Search
 
-The search feature of [package.elm-lang.org](http://package.elm-lang.org/) is quite rudamentary. Community members have already created “type search” [like this](http://klaftertief.github.io/elm-search/) which is really cool, but I think we would benefit from a more traditional search feature as well.
+The search feature of [package.elm-lang.org](http://package.elm-lang.org/) is quite rudimentary. Community members have already created “type search” [like this](http://klaftertief.github.io/elm-search/) which is really cool, but I think we would benefit from a more traditional search feature as well.
 
 Here are some ideas:
 
   1. Explore full-text search. Does searching through everything in the docs give better results than just searching the name and summary?
   2. Include secondary information in rankings. How complete are the docs? How many examples? How many infix operators? This would allow transparent mechanisms for incentivizing better package design and documentation.
   3. Many searches indicate a conceptual mismatch between JS and Elm. When someone searches for “components” the best outcome is that they find some documentation, not a package that claims that this is a thing. So it might be good to detect certain search terms and give structured information above the search results. For example, a link to the relevant parts of [guide.elm-lang.org](https://guide.elm-lang.org/) or some other relevant documentation.
-  
+
 Ideally this service can live on its own server. It would take in JSON and give out JSON. So if the search server goes down, it does not take down the package website. This makes it a great project because it minimizes technical coordination in the early phases.
 
 I think it makes the most sense to focus on 1 and 2, and to not get hung up on the particular details of rankings. For any official use those details will need to be carefully tweaked, so perhaps the best system is one that makes it easy to analyze docs in various ways.
@@ -91,7 +91,7 @@ So the goal here is to **get [elm-lang/virtual-dom](https://github.com/elm-lang/
   1. Be sure that code is getting optimized (but not deoptimized!)
   2. Know more about how much garbage is produced.
 
-Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducable part of the library. This way any potential changes could be informed by performance implications.
+Perhaps certain functions need to be broken into smaller chunks? Perhaps values can be made more monomorphic? A great result would be writeups of what you observe when testing things by hand. If that is useful, it would be best to make these tests a reproducible part of the library. This way any potential changes could be informed by performance implications.
 
 
 <br>
@@ -137,7 +137,7 @@ The best way to approach this problem is to try to implement the following funct
 suggest : Dict String Type -> Type -> List Expr
 suggest knownValues targetType =
   ...
-  
+
 type Type = Var String | Lambda Type Type | ...
 -- simple representation of types
 
@@ -148,7 +148,7 @@ type Expr = Call String (List String)
 
 By doing this, you decouple your work from other stuff. That means you can focus on *making suggestions*. If it goes well, integrating this with other things can be a separate project.
 
-From there, perhaps we can rank suggestions based on which file or package they live in. Based on my experiences on Gmail, I am very interested to see how well we can do with simple heuristics. Assuming quality is good, this approach has many benefits over machine learning. For example, you can easily special case thing, you can tweak heuristics without retraining, and the results may be more predictable for users. Point is, focus on the simplist plausible approach before diving into fancier techniques!
+From there, perhaps we can rank suggestions based on which file or package they live in. Based on my experiences on Gmail, I am very interested to see how well we can do with simple heuristics. Assuming quality is good, this approach has many benefits over machine learning. For example, you can easily special case thing, you can tweak heuristics without retraining, and the results may be more predictable for users. Point is, focus on the simplest plausible approach before diving into fancier techniques!
 
 
 <br>
