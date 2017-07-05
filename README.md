@@ -10,6 +10,7 @@
 ### For New Contributors
 
   - [Markdown Parser](#markdown-parser)
+  - [Data structure evaluation website](#data-structure-evaluation-website)
   - [Data Visualization](#data-visualization)
   - [Package Search](#package-search)
   - [WebGL](#webgl)
@@ -27,6 +28,7 @@ Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-
 
 * * *
 
+
 <br>
 
 ## Markdown Parser
@@ -36,6 +38,25 @@ It would be great to have a markdown parser written entirely in Elm.
 This is a hard project, so I recommend looking into [jgm/cheapskate](https://github.com/jgm/cheapskate) to see a very thoughtful and efficient implementation. The author is super smart and particularly knowledgable on this topic!
 
 I would start by exploring with [`elm-tools/parser`](https://github.com/elm-tools/parser), but perhaps something more heavy duty will be necessary in the end.
+
+
+<br>
+
+## Data structure evaluation website
+
+Over time, the community will develop various implementations of data structures with different performance characterists. In my experiences in other languages, picking “the right one” is very time consuming. So **the big goal here is to help people learn about these data structures and make the right choices for their application.**
+
+Say we have a couple `Queue` and `PriorityQueue` implementations, all with different performance characteristics. It would be wonderful to have a website that:
+
+  1. Points people to great learning resources on immutable queues. What is a queue? What is a priority queue? Is it a tree structure? How does that work? Etc.
+
+  2. Lets people race the implementations for various scenarios. Ideally folks could specify the size and shape of their data on the website and race based on that. If person A has ~100 items with `Int` priorities and person B has ~10000 items with `String` priorities, I would expect them to make the different choices.
+
+  3. Maybe show graphs of performance vs. collection size so people can quickly get a feel for how data structures would work for their expected usage.
+
+In the end, I think this would be **an interactive website that approximates a college-level data structures course, but probably more fun!** All the learning would be directed towards practical problems that folks actually have at the moment, and it will save them a bunch of time!
+
+> Some curration will be necessary to make this great. For example, there would have to be some process for including packages in these numbers. For example, if there is a package that is just has worse performance in all cases, it does not seem like a good use of time for people perusing this website. Ultimately, I think this project would need some coordination with core community members, so please talk about your work on the [elm-dev mailing list](https://groups.google.com/forum/#!forum/elm-dev) to get feedback as early as possible!
 
 
 <br>
