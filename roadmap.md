@@ -100,5 +100,5 @@ Many folks tell me “Elm should compile to X” where X is a thing they like. H
 
 So say we choose to go through Erlang to make Elm a server language too. Great. Now the question is “how do you write a typed server with no side-effects that is (1) true to the spirit of Elm and (2) feels nicer than other server languages?” That's the hard question, and the answer may be that it cannot be done. So writing a compiler backend is like 5% of what it takes to make a project like this worthwhile. And ultimately, the ideal form of a project like this has its own bespoke backend, going to assembly directly.
 
-If you want to explore this more, *please* watch [Code is the Easy Part](https://youtu.be/DSjbTC-hvqQ) first. It gets into how to collaborate in the Elm community, and I would recommend any of [these projects](README.md) over starting down this path as a first project within Elm.
+Point is, I think hacking something together here will be extremely time consuming and ultimately hurt Elm’s reputation of focus and API quality. Instead I recommend watching [Code is the Easy Part](https://youtu.be/DSjbTC-hvqQ) to learn how to collaborate in the Elm community. It is not a wild west anarchy like in JS. From there, I recommend any of [these projects](README.md) as more promising ways of contributing to the Elm ecosystem through code.
 
