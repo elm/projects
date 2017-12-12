@@ -9,9 +9,9 @@
 
 ### For New Contributors
 
+  - [Docs Previewer](#docs-previewer)
   - [Markdown Parser](#markdown-parser)
   - [Data structure evaluation website](#data-structure-evaluation-website)
-  - [Data Visualization](#data-visualization)
   - [Package Search](#package-search)
   - [WebGL](#webgl)
   - [Profiling `virtual-dom`](#profiling-virtual-dom-with-v8-tools)
@@ -27,6 +27,17 @@
 Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-hvqQ?t=14m5s) and read [these comments](roadmap.md) before diving into any of this stuff! Writing the code is definitely not the hard part on any of these!
 
 * * *
+
+
+<br>
+
+## Docs Previewer
+
+When you are creating a package, it would be really helpful to be able to preview them locally. This would allow you to review them and make sure everything looks okay. You could also generate docs for your own non-package code and look at it locally.
+
+Running `elm-make --docs=docs.json` will generate a JSON file with all the modules, types, comments, etc. The [code](https://github.com/elm-lang/package.elm-lang.org/tree/dev/src/frontend) for [package.elm-lang.org](http://package.elm-lang.org/) is basically some decoders and a view function to show that JSON. That means creating a tool to preview docs means making a little script to turn this JSON to HTML. If you want to get wild, it could be a local server that watches for changes to JSON files and updates the HTML as code changes.
+
+In the long run, it would be ideal to have this just be a part of Elm Reactor out of the box, but that is step 17 of getting this going. Start with something small and manageable. Do not worry about sharing code in the optimal way. Do not worry about having a 100% visual match to the package website. Just make it! People will appreciate even the simplest version, and we can see what kind of coordination makes sense from there!
 
 
 <br>
@@ -57,20 +68,6 @@ Say we have a couple `Queue` and `PriorityQueue` implementations, all with diffe
 In the end, I think this would be **an interactive website that approximates a college-level data structures course, but probably more fun!** All the learning would be directed towards practical problems that folks actually have at the moment, and it will save them a bunch of time!
 
 > Some curration will be necessary to make this great. For example, there would have to be some process for including packages in these numbers. For example, if there is a package that is just has worse performance in all cases, it does not seem like a good use of time for people perusing this website. Ultimately, I think this project would need some coordination with core community members, so please talk about your work on the [elm-dev mailing list](https://groups.google.com/forum/#!forum/elm-dev) to get feedback as early as possible!
-
-
-<br>
-
-## Data Visualization
-
-Elm is great for data visualization in theory, and projects like [elm-plot](https://terezka.github.io/elm-plot/) are beginning to make it great in practice!
-
-Start by asking, “what kind of visualization do I need?” See if it exists as an Elm library. If not, create a `view` function that uses [`elm-lang/svg`](https://github.com/elm-lang/svg) to display what you need.
-
-From there, share your work and get feedback! API design is hard, and there are many folks in the Elm community that can help you refine and improve your designs.
-
-**Note:** Resources like [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi) by Edward Tufte are great for learning more about the *art* of visual communication. It's not just about an API!
-
 
 
 <br>
