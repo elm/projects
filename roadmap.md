@@ -60,13 +60,11 @@ First, many people think expanding “web platform” support is easy. “Just c
 
 Second, the general policy is to prioritize things that *cannot be done* over things that *could be done better*. Obviously it would be great if the whole “web platform” was available in Elm today, but anything that is missing can be done with [ports](https://guide.elm-lang.org/interop/javascript.html). And again, after features for single-page apps, expanding the “web platform” seems like the highest priority.
 
-> **Note:** When using ports for something complex, it is often helpful to create a client/server relationship between Elm and JS. Have one port out that gives `Json.Encode.Value` representing some request and have one port in that gives `Json.Decode.Value` that gives responses. So rather than trying to wrap each JS function independently, you draw a clear abstraction boundary between Elm and JS.
-
 Third, a great deal of work has actually gone into `localStorage` and IndexedDB already, but the results were not good enough to be released. If a library like this is released, it will need to be supported forever because we cannot just switch to a better API when we figure it out. Programmers may store important information on thousands of computers out in the world, and losing that data could hurt their business. So until we can offer a really solid approach here (one that is cross-browser, will grow with your application, and can upgrade browser data with new releases) we prefer to be clear that we do not offer this yet.
 
 Maybe these prioritization choices do not appeal to your sensibility or today’s tradeoffs do not seem to work for your scenario. That is fine! It is totally reasonable to circle back to Elm after “web platform” support has expanded and see if it works better for you then.
 
-> **Note:** Many people wonder “why not have the community expand the web platform?” I have tried to address this question [here](https://groups.google.com/d/msg/elm-dev/1JW6wknkDIo/H9ZnS71BCAAJ) and [here](https://groups.google.com/d/msg/elm-dev/bAHD_8PbgKE/X-z67wTdCAAJ). There are other languages out there that make different choices on this question, and I recommend checking them out. They may suit you better!
+> **Note:** Many people wonder “why not have the community expand the web platform?” I have tried to address this question [here](https://groups.google.com/d/msg/elm-dev/1JW6wknkDIo/H9ZnS71BCAAJ) and [here](https://groups.google.com/d/msg/elm-dev/bAHD_8PbgKE/X-z67wTdCAAJ) and [here](https://discourse.elm-lang.org/t/native-code-in-0-19/826). There are other languages out there that make different choices on this question, and I recommend checking them out. They may suit you better!
 
 <br>
 
