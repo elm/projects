@@ -35,7 +35,7 @@ Again, it is very important that you watch [this video](https://youtu.be/DSjbTC-
 
 When you are creating a package, it would be really helpful to be able to preview them locally. This would allow you to review them and make sure everything looks okay. You could also generate docs for your own non-package code and look at it locally.
 
-Running `elm-make --docs=docs.json` will generate a JSON file with all the modules, types, comments, etc. The [code](https://github.com/elm-lang/package.elm-lang.org/tree/dev/src/frontend) for [package.elm-lang.org](http://package.elm-lang.org/) is basically some decoders and a view function to show that JSON. That means creating a tool to preview docs means making a little script to turn this JSON to HTML. If you want to get wild, it could be a local server that watches for changes to JSON files and updates the HTML as code changes.
+Running `elm-make --docs=docs.json` will generate a JSON file with all the modules, types, comments, etc. The [code](https://github.com/elm-lang/package.elm-lang.org/tree/dev/src/frontend) for [package.elm-lang.org](https://package.elm-lang.org/) is basically some decoders and a view function to show that JSON. That means creating a tool to preview docs means making a little script to turn this JSON to HTML. If you want to get wild, it could be a local server that watches for changes to JSON files and updates the HTML as code changes.
 
 In the long run, it would be ideal to have this just be a part of Elm Reactor out of the box, but that is step 17 of getting this going. Start with something small and manageable. Do not worry about sharing code in the optimal way. Do not worry about having a 100% visual match to the package website. Just make it! People will appreciate even the simplest version, and we can see what kind of coordination makes sense from there!
 
@@ -48,7 +48,7 @@ It would be great to have a markdown parser written entirely in Elm.
 
 This is a hard project, so I recommend looking into [jgm/cheapskate](https://github.com/jgm/cheapskate) to see a very thoughtful and efficient implementation. The author is super smart and particularly knowledgable on this topic!
 
-I would start by exploring with [`elm-tools/parser`](https://github.com/elm-tools/parser), but perhaps something more heavy duty will be necessary in the end.
+I would start by exploring with [`elm/parser`](https://package.elm-lang.org/packages/elm/parser/latest), but perhaps something more heavy duty will be necessary in the end.
 
 
 <br>
@@ -67,14 +67,14 @@ Say we have a couple `Queue` and `PriorityQueue` implementations, all with diffe
 
 In the end, I think this would be **an interactive website that approximates a college-level data structures course, but probably more fun!** All the learning would be directed towards practical problems that folks actually have at the moment, and it will save them a bunch of time!
 
-> Some curration will be necessary to make this great. For example, there would have to be some process for including packages in these numbers. For example, if there is a package that is just has worse performance in all cases, it does not seem like a good use of time for people perusing this website. Ultimately, I think this project would need some coordination with core community members, so please talk about your work on the [elm-dev mailing list](https://groups.google.com/forum/#!forum/elm-dev) to get feedback as early as possible!
+> Some curration will be necessary to make this great. For example, there would have to be some process for including packages in these numbers. For example, if there is a package that is just has worse performance in all cases, it does not seem like a good use of time for people perusing this website. Ultimately, I think this project would need some coordination with core community members, so please talk about your work on [elm slack](http://elmlang.herokuapp.com) or [elm discourse](https://discourse.elm-lang.org) to get feedback as early as possible!
 
 
 <br>
 
 ## Package Search
 
-The search feature of [package.elm-lang.org](http://package.elm-lang.org/) is quite rudimentary. Community members have already created “type search” [like this](http://klaftertief.github.io/elm-search/) which is really cool, but I think we would benefit from a more traditional search feature as well.
+The search feature of [package.elm-lang.org](https://package.elm-lang.org/) is quite rudimentary. Community members have already created “type search” [like this](http://klaftertief.github.io/elm-search/) which is really cool, but I think we would benefit from a more traditional search feature as well.
 
 Here are some ideas:
 
@@ -91,7 +91,7 @@ I think it makes the most sense to focus on 1 and 2, and to not get hung up on t
 
 ## WebGL
 
-There is already a great foundation for WebGL with [elm-community/webgl](http://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
+There is already a great foundation for WebGL with [elm-community/webgl](https://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
 
 From there folks are working on projects for [terrain generation](https://twitter.com/czaplic/status/819324109674815489) and [loading 3D meshes](https://twitter.com/czaplic/status/820055313386586112).
 
@@ -102,9 +102,9 @@ I think we can make it really fun and easy to create 3D graphics with Elm, and i
 
 ## Profiling `virtual-dom` with V8 tools
 
-The `elm-lang/virtual-dom` library is [quite fast](http://elm-lang.org/blog/blazing-fast-html-round-two). It may be possible to do better though!
+The `elm/virtual-dom` library is [quite fast](https://elm-lang.org/blog/blazing-fast-html-round-two). It may be possible to do better though!
 
-So the goal here is to **get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives)**. This would allow us to:
+So the goal here is to **get [elm/virtual-dom](https://github.com/elm/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives)**. This would allow us to:
 
   1. Be sure that code is getting optimized (but not deoptimized!)
   2. Know more about how much garbage is produced.
@@ -130,7 +130,7 @@ The relevant code lives in [this repo](https://github.com/process-bot/contributi
 
 # More Academic Stuff
 
-There are a bunch of more speculative projects that it would be fun to look into, particularly if you are a student learning about compilers or programming languages. Please let folks know on [elm-dev](https://groups.google.com/forum/#!forum/elm-dev) if you are looking into any of these as they touch on lots of core stuff and coordination is inevitable if things go well.
+There are a bunch of more speculative projects that it would be fun to look into, particularly if you are a student learning about compilers or programming languages. Please let folks know on [elm discourse](https://discourse.elm-lang.org) if you are looking into any of these as they touch on lots of core stuff and coordination is inevitable if things go well.
 
 
 <br>
@@ -190,14 +190,14 @@ Normally functions like `map : (a -> b) -> List a -> List b` produce generic cod
 
 This topic has a complex relationship to Elm because whole program optimization does not mix well with the kind of asset bundling you need to do in complex webapps.
 
-**The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or mailing list post on [elm-dev](https://groups.google.com/d/forum/elm-dev).
+**The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or mailing list post on [elm discourse](https://discourse.elm-lang.org).
 
 
 <br>
 
 ## Explore WebAssembly
 
-[WebAssembly](http://webassembly.org/) will be maturing over the next few years. Without a garbage collector, it is not viable for languages like Elm. In the meantime, there are a few questions it would be good to answer:
+[WebAssembly](https://webassembly.org/) will be maturing over the next few years. Without a garbage collector, it is not viable for languages like Elm. In the meantime, there are a few questions it would be good to answer:
 
   - What are the facilities for representing UTF-8 strings? If you make it all from bit arrays and trees, we should do a “literature review” of how strings are represented in languages like JS, Java, Go, etc.
   - How does WebAssembly code interact with the DOM? What does that mean for Elm’s virtual-dom library?
