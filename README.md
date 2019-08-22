@@ -132,7 +132,7 @@ $ elm-find String.reverse
 ]
 ```
 
-The implementation should focus on being as fast as possible. Think `grep`.
+The implementation should focus on being as fast as possible. Think `grep`. The goal would be for commands to finish in under 500ms on 100k line projects, but I think it's possible to do a lot better.
 
 This could be used to make a bunch of helpful tools:
 
