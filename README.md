@@ -15,8 +15,9 @@
 
 ### For Advanced Community Members
 
-  - [Type-directed autocomplete](#type-directed-autocomplete)
+  - [`elm-find`](#elm-find)
   - [REPL](#in-browser-repl)
+  - [Type-directed autocomplete](#type-directed-autocomplete)
   - [Monomorphizing](#explore-monomorphizing-compilers)
   - [WebAssembly](#explore-webassembly)
 
@@ -78,8 +79,77 @@ There are a bunch of more speculative projects that it would be fun to look into
 
 These are probably best for people who are quite experienced with Elm. Maybe who have been using it for a year or more. Long enough to have a good sense of the design aesthetic of core Elm projects.
 
+<br>
+
+
+## `elm-find`
+
+Create a command line tool named `elm-find` that is all about quickly finding definitions and usages.
+
+```
+$ elm-find Fake.thing
+[]
+
+$ elm-find toFullName
+[
+    {
+        "definition": {
+            "isLocal": true,
+            "path": "src/Student.elm",
+            "module": "Student",
+            "region": {
+                "start": { "row": 22, "col": 0 }
+                "end": { "row": 34, "col": 0 }
+            }
+        },
+        "uses": [
+            {
+                "path": "src/Main.elm",
+                "module": "Main",
+                "region": {
+                    "start": { "row": 22, "col": 14 }
+                    "end": { "row": 22, "col": 24 }
+                }
+            }
+        ]
+    }
+]
+
+$ elm-find String.reverse
+[
+    {
+        "definition": {
+            "isLocal": false,
+            "package": "elm/core",
+            "module": "String"
+        },
+        "uses": []
+    }
+]
+```
+
+The implementation should focus on being as fast as possible. Think `grep`.
+
+This could be used to make a bunch of helpful tools:
+
+- Editor integrations for "Jump to Definition"
+- A command line tool to do bulk renames in large projects.
+- Editor integrations for "Rename this everywhere" in large projects.
+
+I would recommend implementing this by starting with the existing compiler and stripping out anything that is not needed. This would give you a good foundation for crawling files efficiently, making nice command line arguments, and parsing very quickly.
+
+
+
+## In-browser REPL
+
+Right now our REPL only runs on the command line. It would be amazing to have an in-browser REPL so we could actually see `Html` values and have a better UI for poking around expressions and values.
+
+[The most successful effort](http://elmrepl.cuberoot.in/) runs `elm-repl` on a server. This is quite handy, but I think we should take things like [iPython notebooks](http://nbviewer.jupyter.org/) as inspiration for the end goal.
+
+I expect the early prototype would be a REPL for a simple lambda calculus (not connected to Elm at all) so you could test out the core UI ideas. From there, you would get in contact with community members who work on core tools and figure out what the path would be to bring it in. For example, it would be really cool if the time-travel debugger let you easily go into the REPL for any frame!
 
 <br>
+
 
 ## Type-Directed Autocomplete
 
@@ -116,19 +186,8 @@ From there, perhaps we can rank suggestions based on which file or package they 
 
 **Note:** Based on my experiences working on the Gmail team, I am very interested to see how well we can do with simple heuristics. Assuming quality is good, this approach has many benefits over machine learning. For example, you can easily special case thing, you can tweak heuristics without retraining, and the results may be more predictable for users. Point is, focus on the simplest plausible approach before diving into fancier techniques!
 
-
 <br>
 
-## In-browser REPL
-
-Right now our REPL only runs on the command line. It would be amazing to have an in-browser REPL so we could actually see `Html` values and have a better UI for poking around expressions and values.
-
-[The most successful effort](http://elmrepl.cuberoot.in/) runs `elm-repl` on a server. This is quite handy, but I think we should take things like [iPython notebooks](http://nbviewer.jupyter.org/) as inspiration for the end goal.
-
-I expect the early prototype would be a REPL for a simple lambda calculus (not connected to Elm at all) so you could test out the core UI ideas. From there, you would get in contact with community members who work on core tools and figure out what the path would be to bring it in. For example, it would be really cool if the time-travel debugger let you easily go into the REPL for any frame!
-
-
-<br>
 
 ## Explore Monomorphizing Compilers
 
@@ -140,8 +199,8 @@ This topic has a complex relationship to Elm because whole program optimization 
 
 **The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or mailing list post on [elm-dev](https://groups.google.com/d/forum/elm-dev).
 
-
 <br>
+
 
 ## Explore WebAssembly
 
