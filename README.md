@@ -102,16 +102,7 @@ $ elm-find toFullName
                 "end": { "row": 34, "col": 0 }
             }
         },
-        "uses": [
-            {
-                "path": "src/Main.elm",
-                "module": "Main",
-                "region": {
-                    "start": { "row": 22, "col": 14 }
-                    "end": { "row": 22, "col": 24 }
-                }
-            }
-        ]
+        "uses": []
     }
 ]
 
@@ -123,7 +114,16 @@ $ elm-find String.reverse
             "package": "elm/core",
             "module": "String"
         },
-        "uses": []
+        "uses": [
+            {
+                "path": "src/Main.elm",
+                "module": "Main",
+                "region": {
+                    "start": { "row": 22, "col": 14 }
+                    "end": { "row": 22, "col": 20 }
+                }
+            }
+        ]
     }
 ]
 ```
@@ -138,6 +138,7 @@ This could be used to make a bunch of helpful tools:
 
 I would recommend implementing this by starting with the existing compiler and stripping out anything that is not needed. This would give you a good foundation for crawling files efficiently, making nice command line arguments, and parsing very quickly.
 
+<br>
 
 
 ## In-browser REPL
