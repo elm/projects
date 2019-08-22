@@ -89,7 +89,9 @@ Create a command line tool named `elm-find` that is all about quickly finding de
 ```
 $ elm-find Fake.thing
 []
+```
 
+```
 $ elm-find toFullName
 [
     {
@@ -105,7 +107,9 @@ $ elm-find toFullName
         "uses": []
     }
 ]
+```
 
+```
 $ elm-find String.reverse
 [
     {
