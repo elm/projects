@@ -132,9 +132,8 @@ The implementation should focus on being as fast as possible. Think `grep`.
 
 This could be used to make a bunch of helpful tools:
 
-- Editor integrations for "Jump to Definition"
 - A command line tool to do bulk renames in large projects.
-- Editor integrations for "Rename this everywhere" in large projects.
+- Editor integrations for "Jump to Definition" and bulk renames.
 
 I would recommend implementing this by starting with the existing compiler and stripping out anything that is not needed. This would give you a good foundation for crawling files efficiently, making nice command line arguments, and parsing very quickly.
 
