@@ -49,9 +49,9 @@ In the end, I think this would be **an interactive website that approximates a c
 
 ## Profiling `virtual-dom` with V8 tools
 
-The `elm-lang/virtual-dom` library is [quite fast](http://elm-lang.org/blog/blazing-fast-html-round-two). It may be possible to do better though!
+The `elm-lang/virtual-dom` library is [quite fast](https://elm-lang.org/news/blazing-fast-html-round-two). It may be possible to do better though!
 
-So the goal here is to **get [elm-lang/virtual-dom](https://github.com/elm-lang/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives)**. This would allow us to:
+So the goal here is to **get [elm/virtual-dom](https://github.com/elm/virtual-dom/) setup with [v8-natives](https://www.npmjs.com/package/v8-natives)**. This would allow us to:
 
   1. Be sure that code is getting optimized (but not deoptimized!)
   2. Know more about how much garbage is produced.
@@ -63,7 +63,7 @@ Perhaps certain functions need to be broken into smaller chunks? Perhaps values 
 
 ## WebGL
 
-There is already a great foundation for WebGL with [elm-community/webgl](http://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
+There is already a great foundation for WebGL with [elm-community/webgl](https://package.elm-lang.org/packages/elm-community/webgl/latest), allowing scenes [like this](https://twitter.com/unsoundscapes/status/817493065405435905).
 
 From there folks are working on projects for [terrain generation](https://twitter.com/czaplic/status/819324109674815489) and [loading 3D meshes](https://twitter.com/czaplic/status/820055313386586112).
 
@@ -148,7 +148,7 @@ I would recommend implementing this by starting with the existing compiler and s
 
 Right now our REPL only runs on the command line. It would be amazing to have an in-browser REPL so we could actually see `Html` values and have a better UI for poking around expressions and values.
 
-[The most successful effort](http://elmrepl.cuberoot.in/) runs `elm-repl` on a server. This is quite handy, but I think we should take things like [iPython notebooks](http://nbviewer.jupyter.org/) as inspiration for the end goal.
+[The most successful effort](http://elmrepl.cuberoot.in/) runs `elm-repl` on a server. This is quite handy, but I think we should take things like [iPython notebooks](https://nbviewer.jupyter.org/) as inspiration for the end goal.
 
 I expect the early prototype would be a REPL for a simple lambda calculus (not connected to Elm at all) so you could test out the core UI ideas. From there, you would get in contact with community members who work on core tools and figure out what the path would be to bring it in. For example, it would be really cool if the time-travel debugger let you easily go into the REPL for any frame!
 
@@ -201,14 +201,14 @@ Normally functions like `map : (a -> b) -> List a -> List b` produce generic cod
 
 This topic has a complex relationship to Elm because whole program optimization does not mix well with the kind of asset bundling you need to do in complex webapps.
 
-**The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or mailing list post on [elm-dev](https://groups.google.com/d/forum/elm-dev).
+**The ideal result is documentation.** What papers are relevant? What techniques are needed? Are there any Elm specific details or issues? This kind of thing can be shared as a blog post or on [the Elm Discourse](https://discourse.elm-lang.org/).
 
 <br>
 
 
 ## Explore WebAssembly
 
-[WebAssembly](http://webassembly.org/) will be maturing over the next few years. Without a garbage collector, it is not viable for languages like Elm. In the meantime, there are a few questions it would be good to answer:
+[WebAssembly](https://webassembly.org/) will be maturing over the next few years. Without a garbage collector, it is not viable for languages like Elm. In the meantime, there are a few questions it would be good to answer:
 
   - What are the facilities for representing UTF-8 strings? If you make it all from bit arrays and trees, we should do a “literature review” of how strings are represented in languages like JS, Java, Go, etc.
   - How does WebAssembly code interact with the DOM? What does that mean for Elm’s virtual-dom library?
