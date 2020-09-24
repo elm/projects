@@ -42,7 +42,7 @@ Say we have a couple `Queue` and `PriorityQueue` implementations, all with diffe
 
 In the end, I think this would be **an interactive website that approximates a college-level data structures course, but probably more fun!** All the learning would be directed towards practical problems that folks actually have at the moment, and it will save them a bunch of time!
 
-> Some curration will be necessary to make this great. For example, there would have to be some process for including packages in these numbers. For example, if there is a package that is just has worse performance in all cases, it does not seem like a good use of time for people perusing this website. Ultimately, I think this project would need some coordination with core community members, so please talk about your work on [discourse](https://discourse.elm-lang.org/) to get feedback as early as possible!
+> Some curration will be necessary to make this great. For example, there would have to be some process for including packages in these numbers. For example, if there is a package that is just having a worse performance in all cases, it does not seem like a good use of time for people perusing this website. Ultimately, I think this project would need some coordination with core community members, so please talk about your work on [discourse](https://discourse.elm-lang.org/) to get feedback as early as possible!
 
 
 <br>
