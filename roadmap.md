@@ -3,10 +3,9 @@
 People want to know what is going to happen with Elm. Hopefully this document helps!
 
   - [What is the timeline?](#what-is-the-timeline)
-  - What is next? / [How do I make a single-page app?](#how-do-i-make-a-single-page-app)
-  - More Web Platform packages? / [Where is the localStorage package?](#where-is-the-localstorage-package)
   - [Can I use Elm on servers?](#can-i-use-elm-on-servers)
   - [When will Elm compile to X?](#when-will-elm-compile-to-x)
+  - [Where is the localStorage pagkage?](#where-is-the-localstorage-package)
 
 If you are looking for ways to contribute, please check out [the suggestions](README.md) in this repo.
 
@@ -15,7 +14,7 @@ If you are looking for ways to contribute, please check out [the suggestions](RE
 
 ## What is the timeline?
 
-**There is no timeline with exact dates, but we know what is on the horizon.**
+**There is no timeline with exact dates.**
 
 A lot of people think that (1) languages are just features that need implementing, (2) these features should be placed on a calendar, and (3) we should throw people at the features until they are done early. This is not how Elm has developed!
 
@@ -28,47 +27,6 @@ Point is, I think scheduling progress is kind of a silly idea. “That conceptua
 <br>
 
 
-## How do I make a single-page app?
-
-**[Like this][realworld], and 0.19 will improve asset management.**
-
-The major focus of 0.19 will be creating “single-page apps” in Elm. The features that fall under that umbrella include:
-
-  - Server-side rendering &mdash; sending HTML with the initial response
-  - Tree shaking &mdash; trimming out unused code (usually called dead-code elimination or DCE)
-  - Code splitting &mdash; cutting up code into smaller chunks for better caching
-  - Lazy loading &mdash; only sending the code chunks needed for a particular page
-
-This basically means that an Elm single-page app will be getting more efficient to serve.
-
-> **Note:** It is still too early to say exactly which features will be in the release and how everything will work. Perhaps not all of these features *should* be in the first iteration. Maybe if one is cut, the others can be released earlier. That kind of thing. Point is, this list is more about what the major concerns are.
-
-Now some people evaluating Elm may *need* these features for a particular project. Perhaps every millisecond of page load has significant impact on revenue? I recommend measuring things. If your Elm bundle is 30kb gzipped, you may actually be competitive with other options. But imagining that it cannot work for you, it is a totally reasonable choice to hold off on using Elm for now. We will get there, and I hope you circle back after 0.19 and evaluate Elm again. That’s what [Scott is doing](https://twitter.com/scottcorgan/status/857586663261949954)!
-
-Most cases are not nearly so extreme. If you are one of the 99% of developers with different tradeoffs, I recommend treating each “page” as a separate Elm module, and then having a “routing” module that uses [elm-lang/navigation](https://github.com/elm-lang/navigation), [evancz/url-parser](https://github.com/evancz/url-parser), `Cmd.map`, and `Sub.map` to swap between pages. This is what [this example][realworld] does, and it will set you up well for 0.19 which will provide a much nicer alternative to that “routing” layer.
-
-[realworld]: https://dev.to/rtfeldman/tour-of-an-open-source-elm-spa
-
-<br>
-
-
-## Where is the localStorage package?
-
-**Expanding [web platform](https://platform.html5.org/) support is a high priority, just behind single-page apps.**
-
-First, many people think expanding “web platform” support is easy. “Just copy the JS API into Elm as tasks!” The whole point of Elm is to rethink common problems and try to do better. Figuring out how to do it “the right way” in a typed functional language with no side-effects takes time. For example, Elm existed for more than *two years* before we added HTML support. Imagine what people were saying to me then! But now, rather than having a fragmented ecosystem of competing HTML libraries of varying quality, we have one library that is great. For many Elm users, the fact that there are clear defaults that work well within the ecosystem is a huge draw.
-
-Second, the general policy is to prioritize things that *cannot be done* over things that *could be done better*. Obviously it would be great if the whole “web platform” was available in Elm today, but anything that is missing can be done with [ports](https://guide.elm-lang.org/interop/javascript.html). And again, after features for single-page apps, expanding the “web platform” seems like the highest priority.
-
-Third, a great deal of work has actually gone into `localStorage` and IndexedDB already, but the results were not good enough to be released. If a library like this is released, it will need to be supported forever because we cannot just switch to a better API when we figure it out. Programmers may store important information on thousands of computers out in the world, and losing that data could hurt their business. So until we can offer a really solid approach here (one that is cross-browser, will grow with your application, and can upgrade browser data with new releases) we prefer to be clear that we do not offer this yet.
-
-Maybe these prioritization choices do not appeal to your sensibility or today’s tradeoffs do not seem to work for your scenario. That is fine! It is totally reasonable to circle back to Elm after “web platform” support has expanded and see if it works better for you then.
-
-> **Note:** Many people wonder “why not have the community expand the web platform?” I have tried to address this question [here](https://groups.google.com/d/msg/elm-dev/1JW6wknkDIo/H9ZnS71BCAAJ) and [here](https://groups.google.com/d/msg/elm-dev/bAHD_8PbgKE/X-z67wTdCAAJ) and [here](https://discourse.elm-lang.org/t/native-code-in-0-19/826). There are other languages out there that make different choices on this question, and I recommend checking them out. They may suit you better!
-
-<br>
-
-
 ## Can I use Elm on servers?
 
 **No, and if we started today, this would still be a multi-year project.**
@@ -77,11 +35,11 @@ There is a great deal of excitement about Elm on servers. I think this is partia
 
   * Folks want to share types. No more JSON! That *sounds* amazing, but what happens when a user keeps a tab open for a while? If you share types directly, changing types will break their code. Creating a serialization format that can evolve with your product is a very hard problem, [as elaborated upon here](notes/on-sharing-types.md), and simply “having types” does not solve it.
 
-  * People want server-side rendering of HTML. Running a server all in Elm does not really give you this. I mean, it can, but it is way more complicated than having a tool that can take Elm modules and spit out HTML. The simpler version can work with any existing server, which is why that is the approach being explored for 0.19!
+  * People want server-side rendering of HTML. Running a server all in Elm does not really give you this. I mean, it can, but it is way more complicated than having a tool that can take Elm modules and spit out HTML. The simpler version can work with any existing server, which is why that is the approach being explored by various tools created by community members.
 
   * Folks like to think languages are “general-purpose” and if the language is good, it should be good at *anything*. People say C++ is a general-purpose language, but it is not so nice for web apps. People say Python is a general purpose language, but it is not so good for operating systems. And you cannot just “make Python good at operating systems” by compiling it to C. More notes on “general-purpose” as a questionable concept [here](notes/on-general-purpose.md).
 
-I think the main thing you get from “Elm on servers” is the ability to share some libraries and to have common tooling. That is still pretty neat, and perhaps worthwhile. That said, **I think it is a better strategy to make Elm an extremely strong choice for web apps before expanding to other domains.** There is still a lot of work to do for web apps!
+I think the main thing you get from “Elm on servers” is the ability to share some libraries and to have common tooling. That is still pretty neat, and perhaps worthwhile. That said, I think there could be something very promising here, but it is a long and slow project.
 
 And before you try to do it yourself...
 
@@ -100,3 +58,19 @@ So say we choose to go through Erlang to make Elm a server language too. Great. 
 
 Point is, I think hacking something together here will be extremely time consuming and ultimately hurt Elm’s reputation of focus and API quality. Instead I recommend watching [Code is the Easy Part](https://youtu.be/DSjbTC-hvqQ) to learn how to collaborate in the Elm community. It is not a wild west anarchy like in JS. From there, I recommend any of [these projects](README.md) as more promising ways of contributing to the Elm ecosystem through code.
 
+<br>
+
+
+## Where is the localStorage package?
+
+**We ask that people use [ports](https://guide.elm-lang.org/interop/ports.html) for aspects of [the web platform](https://platform.html5.org/) that do not have Elm packages yet.**
+
+First, many people think expanding “web platform” support is easy. “Just copy the JS API into Elm as tasks!” The whole point of Elm is to rethink common problems and try to do better. Figuring out how to do it “the right way” in a typed functional language with no side-effects takes time. For example, Elm existed for more than *two years* before we added HTML support. Imagine what people were saying to me then! But now, rather than having a fragmented ecosystem of competing HTML libraries of varying quality, we have one library that is great. For many Elm users, the fact that there are clear defaults that work well within the ecosystem is a huge draw.
+
+Second, the general policy is to prioritize things that *cannot be done* over things that *could be done better*. Obviously it would be great if the whole Web Platform was available in Elm today, but anything that is missing appears to be possible with [ports](https://guide.elm-lang.org/interop/ports.html) or [custom elements](https://guide.elm-lang.org/interop/custom_elements.html).
+
+Third, a great deal of work has actually gone into `localStorage` and IndexedDB already, but the results were not good enough to be released. If a library like this is released, it will need to be supported forever because we cannot just switch to a better API when we figure it out. Programmers may store important information on thousands of computers out in the world, and losing that data could hurt their business. So until we can offer a really solid approach here (one that is cross-browser, will grow with your application, and can upgrade browser data with new releases) we prefer to be clear that we do not offer this yet. I suspect that work on the prior two questions may reveal something worthwhile, but it is still quite uncertain.
+
+Maybe these prioritization choices do not appeal to your sensibility or today’s tradeoffs do not seem to work for your scenario. That is fine! It is totally reasonable to circle back to Elm after Web Platform support has expanded and see if it works better for you then.
+
+> **Note:** Many people wonder “why not have the community expand the web platform?” I have tried to address this question [here](https://groups.google.com/d/msg/elm-dev/1JW6wknkDIo/H9ZnS71BCAAJ) and [here](https://groups.google.com/d/msg/elm-dev/bAHD_8PbgKE/X-z67wTdCAAJ) and [here](https://discourse.elm-lang.org/t/native-code-in-0-19/826). There are other languages out there that make different choices on this question, and I recommend checking them out. They may suit you better!
