@@ -29,9 +29,9 @@ Point is, I think scheduling progress is kind of a silly idea. “That conceptua
 
 ## Can I use Elm on servers?
 
-**No, and if we started today, this would still be a multi-year project.**
+**No, but it is an area of interest.**
 
-There is a great deal of excitement about Elm on servers. I think this is partially due to a couple common misconceptions about running the same language on the front-end and back-end:
+Many users would really like to run Elm on servers in a direct way. "Take Elm code and have it run on servers." I think this naive path seems promising due to a couple common misconceptions about running the same language on the front-end and back-end:
 
   * Folks want to share types. No more JSON! That *sounds* amazing, but what happens when a user keeps a tab open for a while? If you share types directly, changing types will break their code. Creating a serialization format that can evolve with your product is a very hard problem, [as elaborated upon here](notes/on-sharing-types.md), and simply “having types” does not solve it.
 
@@ -39,9 +39,7 @@ There is a great deal of excitement about Elm on servers. I think this is partia
 
   * Folks like to think languages are “general-purpose” and if the language is good, it should be good at *anything*. People say C++ is a general-purpose language, but it is not so nice for web apps. People say Python is a general purpose language, but it is not so good for operating systems. And you cannot just “make Python good at operating systems” by compiling it to C. More notes on “general-purpose” as a questionable concept [here](notes/on-general-purpose.md).
 
-I think the main thing you get from “Elm on servers” is the ability to share some libraries and to have common tooling. That is still pretty neat, and perhaps worthwhile. That said, I think there could be something very promising here, but it is a long and slow project.
-
-And before you try to do it yourself...
+All that said, I think there could be something very promising in this area if it is done in a very particular way. It is something that I have been thinking about for many years now, and I am exploring some compilation techniques that might make a project in this general area worthwhile.
 
 <br>
 
@@ -54,9 +52,9 @@ Many folks tell me “Elm should compile to X” where X is a thing they like. H
 
 **The hard part of supporting a domain is not the compiler. It is making a good ecosystem.** Python is nice for scientific computing because of things like NumPy and SciPy, not because of whatever backend. Elm is nice for front-end because of the ecosystem, like the HTML library and The Elm Architecture, not the particulars of code generation. **Just putting a typed functional language in a domain does not mean it will be fun and productive in practice!**
 
-So say we choose to go through Erlang to make Elm a server language too. Great. Now the question is “how do you write a typed server with no side-effects that is (1) true to the spirit of Elm and (2) feels nicer than other server languages?” That's the hard question, and the answer may be that it cannot be done. So writing a compiler backend is like 5% of what it takes to make a project like this worthwhile. And ultimately, the ideal form of a project like this has its own bespoke backend, going to assembly directly.
+So say we choose to go through Erlang to make Elm a server language too. Great. Now the question is “how do you write a typed server with no side-effects that is (1) true to the spirit of Elm and (2) feels nicer than other server languages?” That's the hard question, and the answer may be that it cannot be done. So writing a compiler backend is like 5% of what it takes to make a project like this worthwhile. The ideal form of a project like this probably has its own bespoke backend, possibly going to assembly directly, but I think the harder work is the API design of figuring out "how does Elm interact with a database in a nice way?" and "how is security handled?"
 
-Point is, I think hacking something together here will be extremely time consuming and ultimately hurt Elm’s reputation of focus and API quality. Instead I recommend watching [Code is the Easy Part](https://youtu.be/DSjbTC-hvqQ) to learn how to collaborate in the Elm community. It is not a wild west anarchy like in JS. From there, I recommend any of [these projects](README.md) as more promising ways of contributing to the Elm ecosystem through code.
+Point is, I think hacking some code generator together would be extremely time consuming and risky, but not very rewarding. Community members have figured out how to run projects like `elm-optimize-level-2` and `elm-spa` that get at these considerations, but without embarking on a project that is intractable. I recommend trying something more like that, and looking through [these projects](README.md) for inspiration on ways to contribute to the Elm ecosystem through code.
 
 <br>
 
