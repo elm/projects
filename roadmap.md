@@ -5,7 +5,7 @@ People want to know what is going to happen with Elm. Hopefully this document he
   - [What is the timeline?](#what-is-the-timeline)
   - [Can I use Elm on servers?](#can-i-use-elm-on-servers)
   - [When will Elm compile to X?](#when-will-elm-compile-to-x)
-  - [Where is the localStorage pagkage?](#where-is-the-localstorage-package)
+  - [Where is the localStorage package?](#where-is-the-localstorage-package)
 
 If you are looking for ways to contribute, please check out [the suggestions](README.md) in this repo.
 
